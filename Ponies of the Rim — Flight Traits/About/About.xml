@@ -23,12 +23,12 @@
       <displayName>Harmony</displayName>
     </li>
     <li>
-      <packageId>poniesoftherim</packageId>
+      <packageId>Pony.PoniesOfTheRim.Core</packageId>
       <displayName>Ponies of the Rim - Core</displayName>
     </li>
   </modDependencies>
   <loadAfter>
     <li>brrainz.harmony</li>
-    <li>poniesoftherim</li>
+    <li>Pony.PoniesOfTheRim.Core</li>
   </loadAfter>
 </ModMetaData>
