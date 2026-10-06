@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- These patches modify Pegasus-only BackstoryDefs by defName.
+       They add extensions to the backstory itself, not its category lists. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusFighter"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>1.10</maxStaminaFactor><flightSpeedFactor>1.25</flightSpeedFactor></li></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusFlyingRacer"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>0.90</maxStaminaFactor><flightSpeedFactor>1.30</flightSpeedFactor></li></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusRescuer"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>1.15</maxStaminaFactor><recoveryFactor>1.10</recoveryFactor></li></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusWeatherController"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>1.20</maxStaminaFactor><flightSpeedFactor>1.10</flightSpeedFactor></li></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusYoungRacer"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>0.90</maxStaminaFactor><flightSpeedFactor>1.25</flightSpeedFactor></li></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusCloudLost"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>0.90</maxStaminaFactor><recoveryFactor>0.85</recoveryFactor></li></modExtensions></value>
+  </Operation>
+</Patch>

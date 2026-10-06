@@ -1,0 +1,14 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ponyp\Assemblies\FlightTraits.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ponyp\Assemblies\FlightTraits.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ponyp\Source\obj\Release\FlightTraits.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ponyp\Source\obj\Release\FlightTraits.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ponyp\Source\obj\Release\FlightTraits.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ponyp\Source\obj\Release\FlightTraits.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ponyp\Source\obj\Release\FlightTraits.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ponies of the Rim — Flight Traits\Assemblies\FlightTraits.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ponies of the Rim — Flight Traits\Assemblies\FlightTraits.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ponies of the Rim — Flight Traits\Source\obj\Release\FlightTraits.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ponies of the Rim — Flight Traits\Source\obj\Release\FlightTraits.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ponies of the Rim — Flight Traits\Source\obj\Release\FlightTraits.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ponies of the Rim — Flight Traits\Source\obj\Release\FlightTraits.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ponies of the Rim — Flight Traits\Source\obj\Release\FlightTraits.pdb

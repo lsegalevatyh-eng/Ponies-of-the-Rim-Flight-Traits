@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "z0dw8WCruI8=",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Ponies of the Rim — Flight Traits\\Source\\FlightTraits.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Snow storm\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\Snow storm\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net48\\1.0.3\\microsoft.netframework.referenceassemblies.net48.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
