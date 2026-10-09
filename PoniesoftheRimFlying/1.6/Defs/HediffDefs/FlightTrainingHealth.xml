@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>FlightTraits_FlightTrainingStatus</defName>
+    <label>состояние крыльев</label>
+
+    <description>Физическая подготовка к полёту. Полный расход выносливости с 100% до 0% даёт один балл тренировки. Необходимое количество баллов за тренировочное окно улучшает состояние. Отсутствие расхода выносливости ведёт к потере тренированности, а затем к атрофии. Любой расход выносливости в полёте сбрасывает прогресс к атрофии. Это не инфекция. Иммунитет и лечение не требуются.</description>
+
+    <hediffClass>FlightTraits.Hediff_FlightTrainingStatus</hediffClass>
+
+    <initialSeverity>6</initialSeverity>
+    <maxSeverity>12</maxSeverity>
+
+    <tendable>false</tendable>
+    <isBad>false</isBad>
+
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>атрофия VI</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>атрофия V</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <label>атрофия IV</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>атрофия III</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <label>атрофия II</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>5</minSeverity>
+        <label>атрофия I</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>6</minSeverity>
+        <label>обычное состояние</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>7</minSeverity>
+        <label>тренировка I</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>8</minSeverity>
+        <label>тренировка II</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>9</minSeverity>
+        <label>тренировка III</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>10</minSeverity>
+        <label>тренировка IV</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>11</minSeverity>
+        <label>тренировка V</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>12</minSeverity>
+        <label>тренировка VI</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+    </stages>
+
+  </HediffDef>
+
+</Defs>

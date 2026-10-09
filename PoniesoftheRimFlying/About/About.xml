@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Ponies of the Rim — Flight Traits</name>
+  <author>Snow storm</author>
+  <packageId>snowstorm.poniesoftherim.flighttraits</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>
+Flight Traits adds a collection of flight-focused personality traits and life stories for flying ponies in RimWorld.
+
+Traits shape each pony’s aerial style: some are faster or can stay airborne longer, while others recover stamina more quickly or trade one advantage for a drawback. Powerful all-around flight traits are intentionally uncommon, so exceptional flyers stand out.
+
+This add-on also gives selected Pegasus backstories flight-related modifiers. Rainbow Dash’s unique childhood and Wonderbolt career together provide approximately +30% flight speed, +40% maximum flight stamina, and +20% stamina recovery.
+
+Flight modifiers apply through Ponies of the Rim’s flight system. Generation filtering is intended to keep flight-specific traits and stories exclusive to eligible flying pawns.
+
+Requires RimWorld 1.6, Harmony, and Ponies of the Rim - Core.
+
+
+REBALANCED FLIGHT TABLE (ALL RACES)
+
+Race        | Wing Type            | Speed | Stamina | Recovery | Drain | Lore
+------------|----------------------|-------|---------|----------|-------|-----------------------------
+Pegasus     | Feathered, medium    | 1.15  | 1.10    | 1.10     | 0.95  | Fast, agile
+Alicorn     | Feathered, large     | 0.95  | 1.35    | 1.15     | 0.85  | Powerful, enduring
+Batpony     | Membranous, small    | 1.35  | 0.75    | 0.90     | 1.25  | Nocturnal, fast, fragile
+Thestral    | Membranous, small    | 1.35  | 0.75    | 0.90     | 1.25  | Same as batpony
+Changeling  | Membranous, magical  | 1.00  | 1.15    | 1.25     | 0.85  | Magical, efficient
+Griffon     | Feathered, large     | 1.05  | 0.95    | 0.95     | 1.05  | Strong, but heavy
+Hippogriff  | Feathered, medium    | 1.10  | 1.05    | 1.05     | 0.95  | Versatile
+
+Parameter explanations:
+- Speed    — flight speed multiplier (flightSpeedFactor).
+- Stamina  — maximum time in the air without landing (maxStaminaFactor).
+- Recovery — how fast stamina regenerates on the ground (recoveryFactor).
+- Drain    — how quickly stamina is consumed in flight (staminaDrainFactor).
+
+Values above 1.0 are buffs; values below 1.0 are debuffs.
+
+
+  </description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+    </li>
+    <li>
+      <packageId>Pony.PoniesOfTheRim.Core</packageId>
+      <displayName>Ponies of the Rim - Core</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Pony.PoniesOfTheRim.Core</li>
+  </loadAfter>
+</ModMetaData>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Rainbow Dash unique childhood: trained for racing. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_RainbowDash_Child"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>1.10</flightSpeedFactor>
+          <maxStaminaFactor>1.15</maxStaminaFactor>
+        </li>
+      </modExtensions>
+    </value>
+  </Operation>
+
+  <!-- Rainbow Dash unique adulthood: Wonderbolt Ace. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_RainbowDash_Adult"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>1.25</flightSpeedFactor>
+          <maxStaminaFactor>1.3</maxStaminaFactor>
+          <recoveryFactor>1.25</recoveryFactor>
+        </li>
+      </modExtensions>
+    </value>
+  </Operation>
+</Patch>

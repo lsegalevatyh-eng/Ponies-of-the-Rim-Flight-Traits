@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Создаём comps только у определений рас. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[
+      self::ThingDef
+      or self::AlienRace.ThingDef_AlienRace
+    ][
+      defName="Pony_Pegasus"
+      or defName="Pony_Alicorn"
+      or defName="Pony_Batpony"
+      or defName="Pony_Changeling"
+      or defName="Pony_Changedling"
+      or defName="Pony_Griffon"
+      or defName="Pony_Hippogriff"
+    ][not(comps)]</xpath>
+
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/*[
+        self::ThingDef
+        or self::AlienRace.ThingDef_AlienRace
+      ][
+        defName="Pony_Pegasus"
+        or defName="Pony_Alicorn"
+        or defName="Pony_Batpony"
+        or defName="Pony_Changeling"
+        or defName="Pony_Changedling"
+        or defName="Pony_Griffon"
+        or defName="Pony_Hippogriff"
+      ][not(comps)]</xpath>
+
+      <value>
+        <comps />
+      </value>
+    </match>
+  </Operation>
+
+  <!-- Добавляем компонент, если его ещё нет. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[
+      self::ThingDef
+      or self::AlienRace.ThingDef_AlienRace
+    ][
+      defName="Pony_Pegasus"
+      or defName="Pony_Alicorn"
+      or defName="Pony_Batpony"
+      or defName="Pony_Changeling"
+      or defName="Pony_Changedling"
+      or defName="Pony_Griffon"
+      or defName="Pony_Hippogriff"
+    ]/comps[
+      not(li[
+        @Class="FlightTraits.CompProperties_PegasusFlightTraining"
+      ])
+    ]</xpath>
+
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/*[
+        self::ThingDef
+        or self::AlienRace.ThingDef_AlienRace
+      ][
+        defName="Pony_Pegasus"
+        or defName="Pony_Alicorn"
+        or defName="Pony_Batpony"
+        or defName="Pony_Changeling"
+        or defName="Pony_Changedling"
+        or defName="Pony_Griffon"
+        or defName="Pony_Hippogriff"
+      ]/comps[
+        not(li[
+          @Class="FlightTraits.CompProperties_PegasusFlightTraining"
+        ])
+      ]</xpath>
+
+      <value>
+        <li Class="FlightTraits.CompProperties_PegasusFlightTraining">
+          <trainingLevelsMax>6</trainingLevelsMax>
+          <atrophyLevelsMax>6</atrophyLevelsMax>
+
+          <trainingStaminaBonus>0.05</trainingStaminaBonus>
+          <trainingSpeedBonus>0.01</trainingSpeedBonus>
+
+          <atrophyStaminaPenalty>0.05</atrophyStaminaPenalty>
+          <atrophySpeedPenalty>0.01</atrophySpeedPenalty>
+
+          <trainingDaysRequired>5</trainingDaysRequired>
+          <trainingPointsRequired>10</trainingPointsRequired>
+
+          <atrophyDaysRequired>15</atrophyDaysRequired>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

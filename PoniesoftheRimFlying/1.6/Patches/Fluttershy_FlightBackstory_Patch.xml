@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Флаттершай: детство — «Смотритель зоопарка» -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_Fluttershy_Child"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>0.75</flightSpeedFactor>
+          <maxStaminaFactor>0.70</maxStaminaFactor>
+          <recoveryFactor>0.85</recoveryFactor>
+        </li>
+      </modExtensions>
+    </value>
+  </Operation>
+
+  <!-- Флаттершай: зрелость — «Застенчивый летун» -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_Fluttershy_Adult"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>0.70</flightSpeedFactor>
+          <maxStaminaFactor>0.65</maxStaminaFactor>
+          <recoveryFactor>0.80</recoveryFactor>
+          <staminaDrainFactor>1.25</staminaDrainFactor>
+        </li>
+      </modExtensions>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,768 @@
+﻿FOLDER STRUCTURE
+================
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\1.6"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\1.6\Assemblies"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\1.6\Defs"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\1.6\Defs\BackstoryDef"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\1.6\Defs\TraitDef"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\1.6\Patches"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\About"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Languages"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Languages\Russian"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Languages\Russian\DefInjected"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Languages\Russian\DefInjected\BackstoryDef"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Languages\Russian\DefInjected\TraitDef"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj"
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\Release"
+
+FILES
+=====
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\1.6\Assemblies\FlightTraits.dll"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\1.6\Defs\BackstoryDef\FlightBackstories_Expanded.xml"
+
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!-- Childhood backstories: vanilla Child category -->
+<BackstoryDef><defName>FlightStory_MountainWindFoal</defName><slot>Childhood</slot><spawnCategories><li>Child</li></spawnCategories><title>foal of the mountain winds</title><titleShort>mountain foal</titleShort><description>[PAWN_nameDef] grew up among mountain air currents and learned to glide at an early age. Flying came as naturally to [PAWN_pronoun] as walking.</description><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>1.15</maxStaminaFactor><flightSpeedFactor>0.90</flightSpeedFactor></li></modExtensions></BackstoryDef>
+<BackstoryDef><defName>FlightStory_CloudFarmFoal</defName><slot>Childhood</slot><spawnCategories><li>Child</li></spawnCategories><title>cloud-farm helper</title><titleShort>farm helper</titleShort><description>[PAWN_nameDef] helped [PAWN_possessive] family on their cloud farm, carrying light tools, watching storm clouds, and flying short routes.</description><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>1.10</maxStaminaFactor></li></modExtensions></BackstoryDef>
+<BackstoryDef><defName>FlightStory_RooftopRacer</defName><slot>Childhood</slot><spawnCategories><li>Child</li></spawnCategories><title>rooftop racer</title><titleShort>roof racer</titleShort><description>[PAWN_nameDef] took part in dangerous races between rooftops and towers. Quick starts came easily to [PAWN_objective], but long flights left [PAWN_objective] exhausted.</description><modExtensions><li Class="FlightTraits.FlightTraitExtension"><flightSpeedFactor>1.22</flightSpeedFactor><maxStaminaFactor>0.82</maxStaminaFactor></li></modExtensions></BackstoryDef>
+<BackstoryDef><defName>FlightStory_PostCrashCareful</defName><slot>Childhood</slot><spawnCategories><li>Child</li></spawnCategories><title>survivor of a fall</title><titleShort>careful flyer</titleShort><description>After a severe fall, [PAWN_nameDef] feared heights for a long time. The fear eventually faded, but [PAWN_possessive] cautious flying habits remained.</description><modExtensions><li Class="FlightTraits.FlightTraitExtension"><flightSpeedFactor>0.88</flightSpeedFactor><maxStaminaFactor>1.12</maxStaminaFactor></li></modExtensions></BackstoryDef>
+<!-- Adult backstories: vanilla Civil category -->
+<BackstoryDef><defName>FlightStory_FormerWonderbolt</defName><slot>Adulthood</slot><spawnCategories><li>Civil</li></spawnCategories><title>former Wonderbolt</title><titleShort>Wonderbolt</titleShort><description>[PAWN_nameDef] completed elite flight training and performed as part of a famous aerial team. Even after leaving, [PAWN_pronoun] retained [PAWN_possessive] speed and flying technique.</description><modExtensions><li Class="FlightTraits.FlightTraitExtension"><flightSpeedFactor>1.25</flightSpeedFactor><maxStaminaFactor>1.10</maxStaminaFactor><recoveryFactor>0.90</recoveryFactor></li></modExtensions></BackstoryDef>
+<BackstoryDef><defName>FlightStory_MailCourier</defName><slot>Adulthood</slot><spawnCategories><li>Civil</li></spawnCategories><title>air-mail courier</title><titleShort>mail flyer</titleShort><description>[PAWN_nameDef] spent years delivering mail between remote settlements. [PAWN_pronoun] learned to pace [PAWN_possessive] strength and keep moving.</description><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>1.20</maxStaminaFactor><recoveryFactor>1.10</recoveryFactor><flightSpeedFactor>0.92</flightSpeedFactor></li></modExtensions></BackstoryDef>
+<BackstoryDef><defName>FlightStory_CrashRescue</defName><slot>Adulthood</slot><spawnCategories><li>Civil</li></spawnCategories><title>crash rescuer</title><titleShort>flight rescuer</titleShort><description>After an accident, [PAWN_nameDef] helped search for survivors and evacuate the injured. Since then, [PAWN_pronoun] has chosen reliable routes and conserved [PAWN_possessive] strength.</description><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>1.15</maxStaminaFactor><flightSpeedFactor>0.88</flightSpeedFactor><recoveryFactor>1.10</recoveryFactor></li></modExtensions></BackstoryDef>
+<BackstoryDef><defName>FlightStory_AerialScout</defName><slot>Adulthood</slot><spawnCategories><li>Civil</li></spawnCategories><title>former aerial scout</title><titleShort>aerial scout</titleShort><description>[PAWN_nameDef] served as a scout, covering long distances while watching roads and camps from above.</description><modExtensions><li Class="FlightTraits.FlightTraitExtension"><flightSpeedFactor>1.24</flightSpeedFactor><maxStaminaFactor>0.88</maxStaminaFactor></li></modExtensions></BackstoryDef>
+<BackstoryDef><defName>FlightStory_FlightSchoolInstructor</defName><slot>Adulthood</slot><spawnCategories><li>Civil</li></spawnCategories><title>flight-school instructor</title><titleShort>flight instructor</titleShort><description>[PAWN_nameDef] taught young flyers to control their breathing, pace their strength, and avoid needless risks.</description><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>1.12</maxStaminaFactor><recoveryFactor>1.12</recoveryFactor></li></modExtensions></BackstoryDef>
+<BackstoryDef><defName>FlightStory_CloudShowPerformer</defName><slot>Adulthood</slot><spawnCategories><li>Civil</li></spawnCategories><title>cloud-show performer</title><titleShort>air performer</titleShort><description>[PAWN_nameDef] performed in aerial shows, making sharp turns and daring stunts before the crowds.</description><modExtensions><li Class="FlightTraits.FlightTraitExtension"><flightSpeedFactor>1.22</flightSpeedFactor><maxStaminaFactor>0.85</maxStaminaFactor></li></modExtensions></BackstoryDef>
+<BackstoryDef><defName>FlightStory_StormCourier</defName><slot>Adulthood</slot><spawnCategories><li>Civil</li></spawnCategories><title>storm courier</title><titleShort>storm courier</titleShort><description>[PAWN_nameDef] delivered cargo through bad weather. [PAWN_possessive] flight became fast and enduring, though recovery takes longer.</description><modExtensions><li Class="FlightTraits.FlightTraitExtension"><flightSpeedFactor>1.15</flightSpeedFactor><maxStaminaFactor>1.15</maxStaminaFactor><recoveryFactor>0.82</recoveryFactor></li></modExtensions></BackstoryDef>
+</Defs>
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\1.6\Defs\TraitDef\FlightTraits_Expanded.xml"
+
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!-- Consolidated flight traits; original modifiers retained. -->
+<!-- Balanced trade-offs -->
+<TraitDef><defName>FlightTraits_Ace</defName><commonality>1</commonality><label>flight ace</label><description>Confidently handles dangerous stretches, spending more stamina.</description><degreeDatas><li><label>flight ace</label><description>Flight speed +12%; maximum flight stamina -10%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>0.90</maxStaminaFactor><flightSpeedFactor>1.12</flightSpeedFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_Whirlwind</defName><commonality>1</commonality><label>whirlwind</label><description>Accelerates sharply, but tires quickly.</description><degreeDatas><li><label>whirlwind</label><description>Flight speed +25%; maximum flight stamina -25%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>0.75</maxStaminaFactor><flightSpeedFactor>1.25</flightSpeedFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_SmoothFlight</defName><commonality>1</commonality><label>smooth flight</label><description>Conserves stamina at the cost of speed.</description><degreeDatas><li><label>smooth flight</label><description>Maximum flight stamina +20%; flight speed -15%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>1.20</maxStaminaFactor><flightSpeedFactor>0.85</flightSpeedFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_LongHaul</defName><commonality>1</commonality><label>long-haul flyer</label><description>Endures long flights at the cost of speed.</description><degreeDatas><li><label>long-haul flyer</label><description>Maximum flight stamina +25%; flight speed -12%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>1.25</maxStaminaFactor><flightSpeedFactor>0.88</flightSpeedFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_HeavyBreathing</defName><commonality>1</commonality><label>heavy breather</label><description>Recovers slowly after flying.</description><degreeDatas><li><label>heavy breather</label><description>Stamina recovery -25%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><recoveryFactor>0.75</recoveryFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_CautiousFlyer</defName><commonality>1</commonality><label>cautious flyer</label><description>Flies steadily and conserves energy.</description><degreeDatas><li><label>cautious flyer</label><description>Flight speed -15%; maximum flight stamina +15%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>1.15</maxStaminaFactor><flightSpeedFactor>0.85</flightSpeedFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_HeightPanic</defName><commonality>1</commonality><label>height panic</label><description>Gets nervous and quickly runs out of stamina.</description><degreeDatas><li><label>height panic</label><description>Maximum flight stamina -20%; recovery -20%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>0.80</maxStaminaFactor><recoveryFactor>0.80</recoveryFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_IronWings</defName><commonality>1</commonality><label>iron wings</label><description>Stays airborne for a long time, but recovers slowly.</description><degreeDatas><li><label>iron wings</label><description>Maximum flight stamina +25%; recovery -20%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>1.25</maxStaminaFactor><recoveryFactor>0.80</recoveryFactor></li></modExtensions></TraitDef>
+<!-- Moderately favorable -->
+<TraitDef><defName>FlightTraits_FastRecovery</defName><commonality>0.45</commonality><label>fast recovery</label><description>Recovers noticeably faster, but has a smaller stamina reserve.</description><degreeDatas><li><label>fast recovery</label><description>Stamina recovery +30%; maximum flight stamina -10%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>0.90</maxStaminaFactor><recoveryFactor>1.30</recoveryFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_GuardsWings</defName><commonality>0.45</commonality><label>wing-protective</label><description>Conserves energy by flying more slowly.</description><degreeDatas><li><label>wing-protective</label><description>Maximum flight stamina +25%; flight speed -10%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>1.25</maxStaminaFactor><flightSpeedFactor>0.90</flightSpeedFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_Patrol</defName><commonality>0.45</commonality><label>patroller</label><description>Recovers well between flights, but has a slightly smaller stamina reserve.</description><degreeDatas><li><label>patroller</label><description>Stamina recovery +25%; maximum flight stamina -10%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>0.90</maxStaminaFactor><recoveryFactor>1.25</recoveryFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_AerialAcrobat</defName><commonality>0.45</commonality><label>aerial acrobat</label><description>Fast and agile, but tires quickly.</description><degreeDatas><li><label>aerial acrobat</label><description>Flight speed +20%; maximum flight stamina -15%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>0.85</maxStaminaFactor><flightSpeedFactor>1.20</flightSpeedFactor></li></modExtensions></TraitDef>
+<!-- Pure benefits; rare -->
+<TraitDef><defName>FlightTraits_Comet</defName><commonality>0.08</commonality><label>comet</label><description>Exceptionally fast and enduring.</description><degreeDatas><li><label>comet</label><description>Flight speed +25%; maximum flight stamina +15%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>1.15</maxStaminaFactor><flightSpeedFactor>1.25</flightSpeedFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_PhoenixBreath</defName><commonality>0.08</commonality><label>phoenix breath</label><description>Has a large stamina reserve and recovers quickly.</description><degreeDatas><li><label>phoenix breath</label><description>Stamina recovery +35%; maximum flight stamina +15%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><recoveryFactor>1.35</recoveryFactor><maxStaminaFactor>1.15</maxStaminaFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_PerfectAerodynamics</defName><commonality>0.08</commonality><label>perfect aerodynamics</label><description>Combines high speed with great endurance.</description><degreeDatas><li><label>perfect aerodynamics</label><description>Flight speed +25%; maximum flight stamina +15%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><flightSpeedFactor>1.25</flightSpeedFactor><maxStaminaFactor>1.15</maxStaminaFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_BornInClouds</defName><commonality>0.08</commonality><label>born in the clouds</label><description>Flies a little faster, stays airborne longer, and recovers faster.</description><degreeDatas><li><label>born in the clouds</label><description>Flight speed, maximum flight stamina, and recovery +15%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>1.15</maxStaminaFactor><recoveryFactor>1.15</recoveryFactor><flightSpeedFactor>1.15</flightSpeedFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_TurboWings</defName><commonality>0.08</commonality><label>turbo wings</label><description>Incredible speed with a slightly larger stamina reserve.</description><degreeDatas><li><label>turbo wings</label><description>Flight speed +35%; maximum flight stamina +10%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><flightSpeedFactor>1.35</flightSpeedFactor><maxStaminaFactor>1.10</maxStaminaFactor></li></modExtensions></TraitDef>
+<TraitDef><defName>FlightTraits_IndefatigablePatrol</defName><commonality>0.08</commonality><label>tireless patroller</label><description>Flies for a very long time and recovers quickly.</description><degreeDatas><li><label>tireless patroller</label><description>Maximum flight stamina +30%; recovery +30%.</description></li></degreeDatas><modExtensions><li Class="FlightTraits.FlightTraitExtension"><degree>0</degree><maxStaminaFactor>1.30</maxStaminaFactor><recoveryFactor>1.30</recoveryFactor></li></modExtensions></TraitDef>
+</Defs>
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\1.6\Patches\FlightBackstoryFlightStats_Patch.xml"
+
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- These patches modify Pegasus-only BackstoryDefs by defName.
+       They add extensions to the backstory itself, not its category lists. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusFighter"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>1.10</maxStaminaFactor><flightSpeedFactor>1.25</flightSpeedFactor></li></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusFlyingRacer"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>0.90</maxStaminaFactor><flightSpeedFactor>1.30</flightSpeedFactor></li></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusRescuer"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>1.15</maxStaminaFactor><recoveryFactor>1.10</recoveryFactor></li></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusWeatherController"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>1.20</maxStaminaFactor><flightSpeedFactor>1.10</flightSpeedFactor></li></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusYoungRacer"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>0.90</maxStaminaFactor><flightSpeedFactor>1.25</flightSpeedFactor></li></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_PegasusCloudLost"]</xpath>
+    <value><modExtensions><li Class="FlightTraits.FlightTraitExtension"><maxStaminaFactor>0.90</maxStaminaFactor><recoveryFactor>0.85</recoveryFactor></li></modExtensions></value>
+  </Operation>
+</Patch>
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\1.6\Patches\RainbowDash_FlightBackstory_Patch.xml"
+
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Rainbow Dash unique childhood: trained for racing. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_RainbowDash_Child"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>1.10</flightSpeedFactor>
+          <maxStaminaFactor>1.15</maxStaminaFactor>
+        </li>
+      </modExtensions>
+    </value>
+  </Operation>
+
+  <!-- Rainbow Dash unique adulthood: Wonderbolt Ace. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.AlienBackstoryDef[defName="Pony_RainbowDash_Adult"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>1.181818</flightSpeedFactor>
+          <maxStaminaFactor>1.217391</maxStaminaFactor>
+          <recoveryFactor>1.20</recoveryFactor>
+        </li>
+      </modExtensions>
+    </value>
+  </Operation>
+</Patch>
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\About\About.xml"
+
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Ponies of the Rim — Flight Traits</name>
+  <author>Snow storm</author>
+  <packageId>snowstorm.poniesoftherim.flighttraits</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>
+    Flight Traits adds a collection of flight-focused personality traits and life stories for flying ponies in RimWorld.
+
+    Traits shape each pony’s aerial style: some are faster or can stay airborne longer, while others recover stamina more quickly or trade one advantage for a drawback. Powerful all-around flight traits are intentionally uncommon, so exceptional flyers stand out.
+
+    This add-on also gives selected Pegasus backstories flight-related modifiers. Rainbow Dash’s unique childhood and Wonderbolt career together provide approximately +30% flight speed, +40% maximum flight stamina, and +20% stamina recovery.
+
+    Flight modifiers apply through Ponies of the Rim’s flight system. Generation filtering is intended to keep flight-specific traits and stories exclusive to eligible flying pawns.
+
+    Requires RimWorld 1.6, Harmony, and Ponies of the Rim - Core.
+  </description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+    </li>
+    <li>
+      <packageId>Pony.PoniesOfTheRim.Core</packageId>
+      <displayName>Ponies of the Rim - Core</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Pony.PoniesOfTheRim.Core</li>
+  </loadAfter>
+</ModMetaData>
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Languages\Russian\DefInjected\BackstoryDef\Backstories_Russian.xml"
+
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+<FlightStory_MountainWindFoal.title>жеребёнок горного ветра</FlightStory_MountainWindFoal.title><FlightStory_MountainWindFoal.titleShort>горный жеребёнок</FlightStory_MountainWindFoal.titleShort><FlightStory_MountainWindFoal.description>[PAWN_nameDef] вырос среди горных потоков воздуха и с раннего возраста учился планировать. Полёт стал для [PAWN_objective] таким же естественным, как ходьба.</FlightStory_MountainWindFoal.description>
+<FlightStory_CloudFarmFoal.title>помощник облачной фермы</FlightStory_CloudFarmFoal.title><FlightStory_CloudFarmFoal.titleShort>фермерский помощник</FlightStory_CloudFarmFoal.titleShort><FlightStory_CloudFarmFoal.description>[PAWN_nameDef] помогал [PAWN_possessive] семье на облачной ферме: переносил лёгкие инструменты, следил за грозовыми тучами и летал по коротким маршрутам.</FlightStory_CloudFarmFoal.description>
+<FlightStory_RooftopRacer.title>гонщик по крышам</FlightStory_RooftopRacer.title><FlightStory_RooftopRacer.titleShort>крышный гонщик</FlightStory_RooftopRacer.titleShort><FlightStory_RooftopRacer.description>[PAWN_nameDef] участвовал в опасных гонках между крышами и башнями. Быстрый старт давался [PAWN_objective] легко, но долгие перелёты утомляли.</FlightStory_RooftopRacer.description>
+<FlightStory_PostCrashCareful.title>переживший падение</FlightStory_PostCrashCareful.title><FlightStory_PostCrashCareful.titleShort>осторожный летун</FlightStory_PostCrashCareful.titleShort><FlightStory_PostCrashCareful.description>После тяжёлого падения [PAWN_nameDef] долго боялся высоты. Со временем страх отступил, но привычка летать осторожно осталась.</FlightStory_PostCrashCareful.description>
+<FlightStory_FormerWonderbolt.title>бывший Вандерболт</FlightStory_FormerWonderbolt.title><FlightStory_FormerWonderbolt.titleShort>Вандерболт</FlightStory_FormerWonderbolt.titleShort><FlightStory_FormerWonderbolt.description>[PAWN_nameDef] прошёл элитную лётную подготовку и выступал в составе знаменитой воздушной команды. Даже после ухода из неё [PAWN_pronoun] сохранил [PAWN_possessive] скорость и технику полёта.</FlightStory_FormerWonderbolt.description>
+<FlightStory_MailCourier.title>почтовый лётчик</FlightStory_MailCourier.title><FlightStory_MailCourier.titleShort>почтовый лётчик</FlightStory_MailCourier.titleShort><FlightStory_MailCourier.description>[PAWN_nameDef] годами доставлял почту между удалёнными поселениями. [PAWN_pronoun] научился рассчитывать силы и не задерживаться в пути.</FlightStory_MailCourier.description>
+<FlightStory_CrashRescue.title>спасатель после крушения</FlightStory_CrashRescue.title><FlightStory_CrashRescue.titleShort>лётный спасатель</FlightStory_CrashRescue.titleShort><FlightStory_CrashRescue.description>После аварии [PAWN_nameDef] помогал искать выживших и эвакуировать пострадавших. С тех пор [PAWN_pronoun] выбирает надёжные маршруты и бережёт силы.</FlightStory_CrashRescue.description>
+<FlightStory_AerialScout.title>бывший воздушный разведчик</FlightStory_AerialScout.title><FlightStory_AerialScout.titleShort>воздушный разведчик</FlightStory_AerialScout.titleShort><FlightStory_AerialScout.description>[PAWN_nameDef] служил разведчиком и пересекал большие расстояния, наблюдая с высоты за дорогами и лагерями.</FlightStory_AerialScout.description>
+<FlightStory_FlightSchoolInstructor.title>инструктор лётной школы</FlightStory_FlightSchoolInstructor.title><FlightStory_FlightSchoolInstructor.titleShort>лётный инструктор</FlightStory_FlightSchoolInstructor.titleShort><FlightStory_FlightSchoolInstructor.description>[PAWN_nameDef] учил молодых летунов контролировать дыхание, распределять силы и не рисковать без необходимости.</FlightStory_FlightSchoolInstructor.description>
+<FlightStory_CloudShowPerformer.title>артист воздушных представлений</FlightStory_CloudShowPerformer.title><FlightStory_CloudShowPerformer.titleShort>воздушный артист</FlightStory_CloudShowPerformer.titleShort><FlightStory_CloudShowPerformer.description>[PAWN_nameDef] выступал в воздушных представлениях, выполняя резкие развороты и рискованные трюки перед толпой.</FlightStory_CloudShowPerformer.description>
+<FlightStory_StormCourier.title>штормовой курьер</FlightStory_StormCourier.title><FlightStory_StormCourier.titleShort>штормовой курьер</FlightStory_StormCourier.titleShort><FlightStory_StormCourier.description>[PAWN_nameDef] доставлял грузы сквозь непогоду. Полёт стал быстрым и выносливым, хотя восстановление после него занимало больше времени.</FlightStory_StormCourier.description>
+</LanguageData>
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Languages\Russian\DefInjected\TraitDef\Traits_Russian.xml"
+
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+<FlightTraits_Ace.label>лётный ас</FlightTraits_Ace.label><FlightTraits_Ace.description>Уверенно проходит опасные участки, тратя больше сил.</FlightTraits_Ace.description><FlightTraits_Ace.degreeDatas.0.label>лётный ас</FlightTraits_Ace.degreeDatas.0.label><FlightTraits_Ace.degreeDatas.0.description>Скорость полёта +12%; максимальная выносливость полёта −10%.</FlightTraits_Ace.degreeDatas.0.description>
+<FlightTraits_Whirlwind.label>вихрь</FlightTraits_Whirlwind.label><FlightTraits_Whirlwind.description>Резко ускоряется, но быстро устаёт.</FlightTraits_Whirlwind.description><FlightTraits_Whirlwind.degreeDatas.0.label>вихрь</FlightTraits_Whirlwind.degreeDatas.0.label><FlightTraits_Whirlwind.degreeDatas.0.description>Скорость полёта +25%; максимальная выносливость полёта −25%.</FlightTraits_Whirlwind.degreeDatas.0.description>
+<FlightTraits_SmoothFlight.label>плавный полёт</FlightTraits_SmoothFlight.label><FlightTraits_SmoothFlight.description>Экономит выносливость ценой скорости.</FlightTraits_SmoothFlight.description><FlightTraits_SmoothFlight.degreeDatas.0.label>плавный полёт</FlightTraits_SmoothFlight.degreeDatas.0.label><FlightTraits_SmoothFlight.degreeDatas.0.description>Максимальная выносливость полёта +20%; скорость полёта −15%.</FlightTraits_SmoothFlight.degreeDatas.0.description>
+<FlightTraits_LongHaul.label>дальнолёт</FlightTraits_LongHaul.label><FlightTraits_LongHaul.description>Выдерживает долгие перелёты ценой скорости.</FlightTraits_LongHaul.description><FlightTraits_LongHaul.degreeDatas.0.label>дальнолёт</FlightTraits_LongHaul.degreeDatas.0.label><FlightTraits_LongHaul.degreeDatas.0.description>Максимальная выносливость полёта +25%; скорость полёта −12%.</FlightTraits_LongHaul.degreeDatas.0.description>
+<FlightTraits_HeavyBreathing.label>тяжёлое дыхание</FlightTraits_HeavyBreathing.label><FlightTraits_HeavyBreathing.description>Медленно восстанавливается после полёта.</FlightTraits_HeavyBreathing.description><FlightTraits_HeavyBreathing.degreeDatas.0.label>тяжёлое дыхание</FlightTraits_HeavyBreathing.degreeDatas.0.label><FlightTraits_HeavyBreathing.degreeDatas.0.description>Восстановление выносливости −25%.</FlightTraits_HeavyBreathing.degreeDatas.0.description>
+<FlightTraits_CautiousFlyer.label>осторожный лётчик</FlightTraits_CautiousFlyer.label><FlightTraits_CautiousFlyer.description>Летает размеренно и бережёт силы.</FlightTraits_CautiousFlyer.description><FlightTraits_CautiousFlyer.degreeDatas.0.label>осторожный лётчик</FlightTraits_CautiousFlyer.degreeDatas.0.label><FlightTraits_CautiousFlyer.degreeDatas.0.description>Скорость полёта −15%; максимальная выносливость полёта +15%.</FlightTraits_CautiousFlyer.degreeDatas.0.description>
+<FlightTraits_HeightPanic.label>паника высоты</FlightTraits_HeightPanic.label><FlightTraits_HeightPanic.description>Нервничает и быстро теряет выносливость.</FlightTraits_HeightPanic.description><FlightTraits_HeightPanic.degreeDatas.0.label>паника высоты</FlightTraits_HeightPanic.degreeDatas.0.label><FlightTraits_HeightPanic.degreeDatas.0.description>Максимальная выносливость полёта −20%; восстановление −20%.</FlightTraits_HeightPanic.degreeDatas.0.description>
+<FlightTraits_IronWings.label>железные крылья</FlightTraits_IronWings.label><FlightTraits_IronWings.description>Долго держится в воздухе, но медленно восстанавливается.</FlightTraits_IronWings.description><FlightTraits_IronWings.degreeDatas.0.label>железные крылья</FlightTraits_IronWings.degreeDatas.0.label><FlightTraits_IronWings.degreeDatas.0.description>Максимальная выносливость полёта +25%; восстановление −20%.</FlightTraits_IronWings.degreeDatas.0.description>
+<FlightTraits_FastRecovery.label>быстрое восстановление</FlightTraits_FastRecovery.label><FlightTraits_FastRecovery.description>Быстро восстанавливается, но имеет меньший запас выносливости.</FlightTraits_FastRecovery.description><FlightTraits_FastRecovery.degreeDatas.0.label>быстрое восстановление</FlightTraits_FastRecovery.degreeDatas.0.label><FlightTraits_FastRecovery.degreeDatas.0.description>Восстановление выносливости +30%; максимальная выносливость полёта −10%.</FlightTraits_FastRecovery.degreeDatas.0.description>
+<FlightTraits_GuardsWings.label>бережёт крылья</FlightTraits_GuardsWings.label><FlightTraits_GuardsWings.description>Экономит силы, летая медленнее.</FlightTraits_GuardsWings.description><FlightTraits_GuardsWings.degreeDatas.0.label>бережёт крылья</FlightTraits_GuardsWings.degreeDatas.0.label><FlightTraits_GuardsWings.degreeDatas.0.description>Максимальная выносливость полёта +25%; скорость полёта −10%.</FlightTraits_GuardsWings.degreeDatas.0.description>
+<FlightTraits_Patrol.label>патрульный</FlightTraits_Patrol.label><FlightTraits_Patrol.description>Хорошо восстанавливается между вылетами, но запас выносливости немного меньше.</FlightTraits_Patrol.description><FlightTraits_Patrol.degreeDatas.0.label>патрульный</FlightTraits_Patrol.degreeDatas.0.label><FlightTraits_Patrol.degreeDatas.0.description>Восстановление выносливости +25%; максимальная выносливость полёта −10%.</FlightTraits_Patrol.degreeDatas.0.description>
+<FlightTraits_AerialAcrobat.label>воздушный акробат</FlightTraits_AerialAcrobat.label><FlightTraits_AerialAcrobat.description>Быстр и ловок, но быстро устаёт.</FlightTraits_AerialAcrobat.description><FlightTraits_AerialAcrobat.degreeDatas.0.label>воздушный акробат</FlightTraits_AerialAcrobat.degreeDatas.0.label><FlightTraits_AerialAcrobat.degreeDatas.0.description>Скорость полёта +20%; максимальная выносливость полёта −15%.</FlightTraits_AerialAcrobat.degreeDatas.0.description>
+<FlightTraits_Comet.label>комета</FlightTraits_Comet.label><FlightTraits_Comet.description>Исключительно быстр и вынослив.</FlightTraits_Comet.description><FlightTraits_Comet.degreeDatas.0.label>комета</FlightTraits_Comet.degreeDatas.0.label><FlightTraits_Comet.degreeDatas.0.description>Скорость полёта +25%; максимальная выносливость полёта +15%.</FlightTraits_Comet.degreeDatas.0.description>
+<FlightTraits_PhoenixBreath.label>дыхание феникса</FlightTraits_PhoenixBreath.label><FlightTraits_PhoenixBreath.description>Обладает большим запасом сил и быстро восстанавливается.</FlightTraits_PhoenixBreath.description><FlightTraits_PhoenixBreath.degreeDatas.0.label>дыхание феникса</FlightTraits_PhoenixBreath.degreeDatas.0.label><FlightTraits_PhoenixBreath.degreeDatas.0.description>Восстановление выносливости +35%; максимальная выносливость полёта +15%.</FlightTraits_PhoenixBreath.degreeDatas.0.description>
+<FlightTraits_PerfectAerodynamics.label>идеальная аэродинамика</FlightTraits_PerfectAerodynamics.label><FlightTraits_PerfectAerodynamics.description>Сочетает высокую скорость и выносливость.</FlightTraits_PerfectAerodynamics.description><FlightTraits_PerfectAerodynamics.degreeDatas.0.label>идеальная аэродинамика</FlightTraits_PerfectAerodynamics.degreeDatas.0.label><FlightTraits_PerfectAerodynamics.degreeDatas.0.description>Скорость полёта +25%; максимальная выносливость полёта +15%.</FlightTraits_PerfectAerodynamics.degreeDatas.0.description>
+<FlightTraits_BornInClouds.label>рождённый в облаках</FlightTraits_BornInClouds.label><FlightTraits_BornInClouds.description>Летает немного быстрее, дольше остаётся в воздухе и быстрее восстанавливается.</FlightTraits_BornInClouds.description><FlightTraits_BornInClouds.degreeDatas.0.label>рождённый в облаках</FlightTraits_BornInClouds.degreeDatas.0.label><FlightTraits_BornInClouds.degreeDatas.0.description>Скорость полёта, максимальная выносливость и восстановление +15%.</FlightTraits_BornInClouds.degreeDatas.0.description>
+<FlightTraits_TurboWings.label>турбокрылья</FlightTraits_TurboWings.label><FlightTraits_TurboWings.description>Невероятная скорость и немного увеличенный запас выносливости.</FlightTraits_TurboWings.description><FlightTraits_TurboWings.degreeDatas.0.label>турбокрылья</FlightTraits_TurboWings.degreeDatas.0.label><FlightTraits_TurboWings.degreeDatas.0.description>Скорость полёта +35%; максимальная выносливость полёта +10%.</FlightTraits_TurboWings.degreeDatas.0.description>
+<FlightTraits_IndefatigablePatrol.label>неутомимый патрульный</FlightTraits_IndefatigablePatrol.label><FlightTraits_IndefatigablePatrol.description>Может очень долго летать и быстро восстанавливается.</FlightTraits_IndefatigablePatrol.description><FlightTraits_IndefatigablePatrol.degreeDatas.0.label>неутомимый патрульный</FlightTraits_IndefatigablePatrol.degreeDatas.0.label><FlightTraits_IndefatigablePatrol.degreeDatas.0.description>Максимальная выносливость полёта +30%; восстановление +30%.</FlightTraits_IndefatigablePatrol.degreeDatas.0.description>
+</LanguageData>
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\FlightTraits.csproj"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\FlightTraitsCore.cs"
+
+using System;
+using System.Collections.Generic;
+using RimWorld;
+using Verse;
+using PoniesOfTheRim.Flying;
+
+namespace FlightTraits
+{
+    public sealed class FlightTraitExtension : DefModExtension
+    {
+        public int degree = 0;
+        public float maxStaminaFactor = 1f;
+        public float recoveryFactor = 1f;
+        public float flightSpeedFactor = 1f;
+        public float generationChance = 0f;
+        public float injuryChancePerFlight = 0f;
+        public HediffDef wingInjury;
+        public List<BodyPartDef> wingBodyParts;
+        public float injurySeverity = 1f;
+
+        public override IEnumerable<string> ConfigErrors()
+        {
+            foreach (string error in base.ConfigErrors()) yield return error;
+            if (!Positive(maxStaminaFactor)) yield return "maxStaminaFactor must be finite and > 0.";
+            if (!Positive(recoveryFactor)) yield return "recoveryFactor must be finite and > 0.";
+            if (!Positive(flightSpeedFactor)) yield return "flightSpeedFactor must be finite and > 0.";
+            if (!Probability(generationChance)) yield return "generationChance must be between 0 and 1.";
+            if (!Probability(injuryChancePerFlight)) yield return "injuryChancePerFlight must be between 0 and 1.";
+            if (injuryChancePerFlight > 0f)
+            {
+                if (wingInjury == null) yield return "wingInjury is required.";
+                if (wingBodyParts == null || wingBodyParts.Count == 0) yield return "wingBodyParts is required.";
+                if (!Positive(injurySeverity)) yield return "injurySeverity must be finite and > 0.";
+            }
+        }
+
+        private static bool Positive(float value)
+        {
+            return value > 0f && !float.IsNaN(value) && !float.IsInfinity(value);
+        }
+
+        private static bool Probability(float value)
+        {
+            return !float.IsNaN(value) && value >= 0f && value <= 1f;
+        }
+    }
+
+    public struct FlightModifiers
+    {
+        public float MaxStaminaFactor;
+        public float RecoveryFactor;
+        public float FlightSpeedFactor;
+
+        public static FlightModifiers Identity
+        {
+            get
+            {
+                return new FlightModifiers
+                {
+                    MaxStaminaFactor = 1f,
+                    RecoveryFactor = 1f,
+                    FlightSpeedFactor = 1f
+                };
+            }
+        }
+    }
+
+    public static class FlightTraitUtility
+    {
+        public static bool IsEligible(Pawn pawn)
+        {
+            return pawn != null && pawn.def != null && pawn.story != null
+                && pawn.TryGetComp<CompPegasusFlightTimer>() != null
+                && pawn.TryGetComp<CompPegasusFlightToggle>() != null;
+        }
+
+        public static FlightTraitExtension GetExtension(Trait trait)
+        {
+            if (trait == null || trait.def == null) return null;
+            FlightTraitExtension extension = trait.def.GetModExtension<FlightTraitExtension>();
+            return extension != null && extension.degree == trait.Degree ? extension : null;
+        }
+
+        public static FlightModifiers GetModifiers(Pawn pawn)
+        {
+            FlightModifiers result = FlightModifiers.Identity;
+            if (!IsEligible(pawn)) return result;
+            if (pawn.story.traits != null)
+            {
+                List<Trait> traits = pawn.story.traits.allTraits;
+                for (int i = 0; i < traits.Count; i++)
+                {
+                    ApplyExtension(ref result, GetExtension(traits[i]));
+                }
+            }
+            // BackstoryDef хранит modExtensions на самом Def, не внутри degreeDatas.
+            if (pawn.story.Childhood != null)
+                ApplyExtension(ref result, pawn.story.Childhood.GetModExtension<FlightTraitExtension>());
+            if (pawn.story.Adulthood != null)
+                ApplyExtension(ref result, pawn.story.Adulthood.GetModExtension<FlightTraitExtension>());
+            result.MaxStaminaFactor = SafeFactor(result.MaxStaminaFactor);
+            result.RecoveryFactor = SafeFactor(result.RecoveryFactor);
+            result.FlightSpeedFactor = SafeFactor(result.FlightSpeedFactor);
+            return result;
+        }
+
+        private static void ApplyExtension(ref FlightModifiers result, FlightTraitExtension extension)
+        {
+            if (extension == null) return;
+            result.MaxStaminaFactor *= SafeFactor(extension.maxStaminaFactor);
+            result.RecoveryFactor *= SafeFactor(extension.recoveryFactor);
+            result.FlightSpeedFactor *= SafeFactor(extension.flightSpeedFactor);
+        }
+
+        private static float SafeFactor(float factor)
+        {
+            return factor > 0f && !float.IsNaN(factor) && !float.IsInfinity(factor) ? factor : 1f;
+        }
+    }
+}
+
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\FlightTraitsGenerationFilter.cs"
+
+using HarmonyLib;
+using RimWorld;
+using Verse;
+
+namespace FlightTraits
+{
+    // Регистрируется Harmony через существующий Bootstrap аддона.
+    [HarmonyPatch]
+    public static class FlightTraitsGenerationFilter
+    {
+        [System.ThreadStatic]
+        private static Pawn currentTraitPawn;
+
+        [System.ThreadStatic]
+        private static Pawn currentBioPawn;
+
+        private static bool CanReceiveFlightDef(Pawn pawn)
+        {
+            return FlightTraitUtility.IsEligible(pawn);
+        }
+
+        private static bool IsFlightDef(Def def)
+        {
+            return def != null &&
+                   def.GetModExtension<FlightTraitExtension>() != null;
+        }
+
+        // PawnGenerator.GenerateTraitsFor выбирает случайный TraitDef
+        // с весом TraitDef.GetGenderSpecificCommonality().
+        [HarmonyPatch(typeof(PawnGenerator), nameof(PawnGenerator.GenerateTraitsFor))]
+        [HarmonyPrefix]
+        private static void BeforeGenerateTraitsFor(Pawn pawn, out Pawn __state)
+        {
+            __state = currentTraitPawn;
+            currentTraitPawn = pawn;
+        }
+
+        [HarmonyPatch(typeof(PawnGenerator), nameof(PawnGenerator.GenerateTraitsFor))]
+        [HarmonyFinalizer]
+        private static System.Exception AfterGenerateTraitsFor(
+            System.Exception __exception, Pawn __state)
+        {
+            currentTraitPawn = __state;
+            return __exception;
+        }
+
+        [HarmonyPatch(typeof(TraitDef), nameof(TraitDef.GetGenderSpecificCommonality))]
+        [HarmonyPostfix]
+        private static void FilterTraitWeight(TraitDef __instance, ref float __result)
+        {
+            if (currentTraitPawn != null &&
+                IsFlightDef(__instance) &&
+                !CanReceiveFlightDef(currentTraitPawn))
+            {
+                __result = 0f;
+            }
+        }
+
+        // Охватывает как перемешанные, так и готовые биографии.
+        [HarmonyPatch(typeof(PawnBioAndNameGenerator),
+            nameof(PawnBioAndNameGenerator.GiveAppropriateBioAndNameTo))]
+        [HarmonyPrefix]
+        private static void BeforeGenerateBio(Pawn pawn, out Pawn __state)
+        {
+            __state = currentBioPawn;
+            currentBioPawn = pawn;
+        }
+
+        [HarmonyPatch(typeof(PawnBioAndNameGenerator),
+            nameof(PawnBioAndNameGenerator.GiveAppropriateBioAndNameTo))]
+        [HarmonyFinalizer]
+        private static System.Exception AfterGenerateBio(
+            System.Exception __exception, Pawn __state)
+        {
+            currentBioPawn = __state;
+            return __exception;
+        }
+
+        // Отсекает BackstoryDef до его попадания в список случайных кандидатов.
+        [HarmonyPatch(typeof(BackstoryCategoryFilter), nameof(BackstoryCategoryFilter.Matches),
+            new[] { typeof(BackstoryDef) })]
+        [HarmonyPostfix]
+        private static void FilterShuffledBackstory(
+            BackstoryDef __0, ref bool __result)
+        {
+            if (__result &&
+                currentBioPawn != null &&
+                IsFlightDef(__0) &&
+                !CanReceiveFlightDef(currentBioPawn))
+            {
+                __result = false;
+            }
+        }
+
+        // Отсекает готовую биографию, если любая из её предысторий
+        // предназначена для летающей расы.
+        [HarmonyPatch(typeof(PawnBioAndNameGenerator), "IsBioUseable")]
+        [HarmonyPostfix]
+        private static void FilterSolidBio(PawnBio bio, ref bool __result)
+        {
+            if (__result &&
+                currentBioPawn != null &&
+                !CanReceiveFlightDef(currentBioPawn) &&
+                (IsFlightDef(bio.childhood) || IsFlightDef(bio.adulthood)))
+            {
+                __result = false;
+            }
+        }
+    }
+}
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\FlightTraitsHarmony.cs"
+
+using System;
+using System.Reflection;
+using HarmonyLib;
+using PoniesOfTheRim.Flying;
+using UnityEngine;
+using Verse;
+
+namespace FlightTraits
+{
+    [StaticConstructorOnStartup]
+    public static class FlightTraitsBootstrap
+    {
+        static FlightTraitsBootstrap()
+        {
+            Harmony harmony = new Harmony("flighttraits.poniesoftherim");
+            InstallPatch(harmony,
+                AccessTools.PropertyGetter(typeof(CompPegasusFlightTimer), "MaxFlightDurationTicks"),
+                typeof(MaxFlightDurationPatch));
+            InstallPatch(harmony,
+                AccessTools.Method(typeof(CompPegasusFlightTimer), "RecoveryPerTick",
+                    new Type[] { typeof(Pawn), typeof(float) }),
+                typeof(RecoveryPerTickPatch));
+
+            try
+            {
+                harmony.CreateClassProcessor(typeof(FlightTraitsGenerationFilter)).Patch();
+                Log.Message("[FlightTraits] Фильтр генерации лётных черт и предысторий подключён.");
+            }
+            catch (Exception exception)
+            {
+                Log.Error("[FlightTraits] Ошибка подключения фильтра генерации:\n" + exception);
+            }
+        }
+
+        private static void InstallPatch(Harmony harmony, MethodInfo target, Type patchType)
+        {
+            if (target == null)
+            {
+                Log.Error("[FlightTraits] Target not found: " + patchType.Name
+                    + ". Check the installed Ponies of the Rim version.");
+                return;
+            }
+            MethodInfo postfix = AccessTools.Method(patchType, "Postfix");
+            if (postfix == null)
+            {
+                Log.Error("[FlightTraits] Postfix not found: " + patchType.FullName);
+                return;
+            }
+            try
+            {
+                harmony.Patch(target, postfix: new HarmonyMethod(postfix));
+                Log.Message("[FlightTraits] Installed: " + patchType.Name);
+            }
+            catch (Exception exception)
+            {
+                Log.Error("[FlightTraits] Failed: " + patchType.Name + "\n" + exception);
+            }
+        }
+    }
+
+    internal static class MaxFlightDurationPatch
+    {
+        public static void Postfix(CompPegasusFlightTimer __instance, ref int __result)
+        {
+            if (__result <= 0) return;
+            Pawn pawn = __instance.parent as Pawn;
+            if (!FlightTraitUtility.IsEligible(pawn)) return;
+            float factor = FlightTraitUtility.GetModifiers(pawn).MaxStaminaFactor;
+            if (factor == 1f) return;
+            double duration = (double)__result * factor;
+            __result = duration >= int.MaxValue
+                ? int.MaxValue
+                : Mathf.Max(1, Mathf.RoundToInt((float)duration));
+        }
+    }
+
+    internal static class RecoveryPerTickPatch
+    {
+        // __0 binds to the first original argument, independently of its name.
+        public static void Postfix(Pawn __0, ref float __result)
+        {
+            if (__result <= 0f || !FlightTraitUtility.IsEligible(__0)) return;
+            __result *= FlightTraitUtility.GetModifiers(__0).RecoveryFactor;
+        }
+    }
+}
+
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\FlightTraitsSpeed.cs"
+
+using System;
+using HarmonyLib;
+using PoniesOfTheRim.Flying;
+using UnityEngine;
+using Verse;
+using Verse.AI;
+
+namespace FlightTraits
+{
+    [StaticConstructorOnStartup]
+    public static class FlightTraitsSpeedBootstrap
+    {
+        static FlightTraitsSpeedBootstrap()
+        {
+            var harmony = new Harmony(
+                "flighttraits.poniesoftherim.speed"
+            );
+
+            try
+            {
+                var target = AccessTools.Method(
+                    typeof(Pawn_PathFollower),
+                    "CostToMoveIntoCell",
+                    new[] { typeof(Pawn), typeof(IntVec3) }
+                );
+
+                if (target == null ||
+                    target.ReturnType != typeof(float))
+                {
+                    Log.Error(
+                        "[FlightTraits] Не найден ожидаемый " +
+                        "CostToMoveIntoCell с результатом float."
+                    );
+                    return;
+                }
+
+                var postfix = new HarmonyMethod(
+                    AccessTools.Method(
+                        typeof(FlightTraitsSpeedPatches),
+                        nameof(FlightTraitsSpeedPatches.MoveCostPostfix)
+                    )
+                );
+
+                // Применяем бонус после обработки
+                // препятствий оригинальным модом.
+                postfix.after = new[]
+                {
+                    "PoniesOfTheRim.Flying"
+                };
+                postfix.priority = Priority.Last;
+
+                harmony.Patch(target, postfix: postfix);
+
+                var rangeTarget = AccessTools.Method(
+                    typeof(PegasusFlightUtility),
+                    "FlightCellsForStamina",
+                    new[]
+                    {
+                        typeof(Pawn),
+                        typeof(CompPegasusFlightTimer),
+                        typeof(float)
+                    }
+                );
+
+                if (rangeTarget != null &&
+                    rangeTarget.ReturnType == typeof(float))
+                {
+                    harmony.Patch(
+                        rangeTarget,
+                        postfix: new HarmonyMethod(
+                            AccessTools.Method(
+                                typeof(FlightTraitsSpeedPatches),
+                                nameof(
+                                    FlightTraitsSpeedPatches.RangePostfix
+                                )
+                            )
+                        )
+                    );
+                }
+                else
+                {
+                    Log.Warning(
+                        "[FlightTraits] Скорость подключена, " +
+                        "но поправка отображаемой дальности " +
+                        "не подключена: метод не найден."
+                    );
+                }
+
+                Log.Message(
+                    "[FlightTraits] Патч скорости полёта подключён."
+                );
+            }
+            catch (Exception exception)
+            {
+                Log.Error(
+                    "[FlightTraits] Ошибка подключения скорости:\n"
+                    + exception
+                );
+            }
+        }
+    }
+
+    public static class FlightTraitsSpeedPatches
+    {
+        public static void MoveCostPostfix(
+            Pawn pawn,
+            ref float __result)
+        {
+            if (pawn == null ||
+                !PegasusFlightUtility.IsPegasusConstantFlight(pawn))
+            {
+                return;
+            }
+
+            float factor =
+                FlightTraitUtility.GetModifiers(pawn)
+                    .FlightSpeedFactor;
+
+            if (float.IsNaN(__result) ||
+                float.IsInfinity(__result) ||
+                __result <= 0f)
+            {
+                return;
+            }
+
+            // Стоимость движения измеряется временем:
+            // больше скорость -> меньше времени на клетку.
+            __result = Mathf.Max(1f, __result / factor);
+        }
+
+        public static void RangePostfix(
+            Pawn pawn,
+            ref float __result)
+        {
+            if (!FlightTraitUtility.IsEligible(pawn))
+                return;
+
+            if (__result <= 0f ||
+                __result == float.MaxValue ||
+                float.IsNaN(__result) ||
+                float.IsInfinity(__result))
+            {
+                return;
+            }
+
+            float factor =
+                FlightTraitUtility.GetModifiers(pawn)
+                    .FlightSpeedFactor;
+
+            double adjusted = (double)__result * factor;
+
+            __result = adjusted >= float.MaxValue
+                ? float.MaxValue
+                : (float)adjusted;
+        }
+    }
+}
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\FlightTraits.csproj.nuget.dgspec.json"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\FlightTraits.csproj.nuget.g.props"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\FlightTraits.csproj.nuget.g.targets"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\project.assets.json"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\project.nuget.cache"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs"
+
+// <autogenerated />
+using System;
+using System.Reflection;
+[assembly: global::System.Runtime.Versioning.TargetFrameworkAttribute(".NETFramework,Version=v4.7.2", FrameworkDisplayName = ".NET Framework 4.7.2")]
+
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs"
+
+// <autogenerated />
+using System;
+using System.Reflection;
+[assembly: global::System.Runtime.Versioning.TargetFrameworkAttribute(".NETFramework,Version=v4.8", FrameworkDisplayName = ".NET Framework 4.8")]
+
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\Release\FlightTraits.assets.cache"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\Release\FlightTraits.csproj.AssemblyReference.cache"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\Release\FlightTraits.csproj.CoreCompileInputs.cache"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\Release\FlightTraits.csproj.FileListAbsolute.txt"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\Release\FlightTraits.dll"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\Release\FlightTraits.GeneratedMSBuildEditorConfig.editorconfig"
+
+------------------------------------------------------------
+"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Poniesofhe\Source\obj\Release\FlightTraits.pdb"

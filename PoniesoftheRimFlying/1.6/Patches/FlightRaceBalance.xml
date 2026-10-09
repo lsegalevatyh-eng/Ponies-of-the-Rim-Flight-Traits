@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- =========================================================
+       Подготовка: добавить modExtensions, если его нет.
+       ========================================================= -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[
+      defName="Pony_Pegasus"
+      or defName="Pony_Alicorn"
+      or defName="Pony_Batpony"
+      or defName="Pony_Changeling"
+      or defName="Pony_Changedling"
+      or defName="Pony_Griffon"
+      or defName="Pony_Hippogriff"
+    ][not(modExtensions)]</xpath>
+
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/*[
+        defName="Pony_Pegasus"
+        or defName="Pony_Alicorn"
+        or defName="Pony_Batpony"
+        or defName="Pony_Changeling"
+        or defName="Pony_Changedling"
+        or defName="Pony_Griffon"
+        or defName="Pony_Hippogriff"
+      ][not(modExtensions)]</xpath>
+
+      <value>
+        <modExtensions />
+      </value>
+    </match>
+  </Operation>
+
+  <!-- =========================================================
+       Удалить старое расширение FlightTraits на этих расах.
+       ========================================================= -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[
+      defName="Pony_Pegasus"
+      or defName="Pony_Alicorn"
+      or defName="Pony_Batpony"
+      or defName="Pony_Changeling"
+      or defName="Pony_Changedling"
+      or defName="Pony_Griffon"
+      or defName="Pony_Hippogriff"
+    ]/modExtensions/li[
+      @Class="FlightTraits.FlightTraitExtension"
+    ]</xpath>
+
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/*[
+        defName="Pony_Pegasus"
+        or defName="Pony_Alicorn"
+        or defName="Pony_Batpony"
+        or defName="Pony_Changeling"
+        or defName="Pony_Changedling"
+        or defName="Pony_Griffon"
+        or defName="Pony_Hippogriff"
+      ]/modExtensions/li[
+        @Class="FlightTraits.FlightTraitExtension"
+      ]</xpath>
+    </match>
+  </Operation>
+
+  <!-- =========================================================
+       ПЕГАС
+       Пернатые средние крылья. Быстрые, манёвренные.
+       ========================================================= -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="Pony_Pegasus"]</xpath>
+
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/*[
+        defName="Pony_Pegasus"
+      ]/modExtensions</xpath>
+
+      <value>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>1.15</flightSpeedFactor>
+          <maxStaminaFactor>1.10</maxStaminaFactor>
+          <recoveryFactor>1.10</recoveryFactor>
+          <staminaDrainFactor>0.95</staminaDrainFactor>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- =========================================================
+       АЛИКОРН
+       Пернатые большие крылья. Мощные и выносливые.
+       ========================================================= -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="Pony_Alicorn"]</xpath>
+
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/*[
+        defName="Pony_Alicorn"
+      ]/modExtensions</xpath>
+
+      <value>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>0.95</flightSpeedFactor>
+          <maxStaminaFactor>1.35</maxStaminaFactor>
+          <recoveryFactor>1.15</recoveryFactor>
+          <staminaDrainFactor>0.85</staminaDrainFactor>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- =========================================================
+       БЭТПОНИ
+       Перепончатые малые крылья. Быстрые, но хрупкие.
+       ========================================================= -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="Pony_Batpony"]</xpath>
+
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/*[
+        defName="Pony_Batpony"
+      ]/modExtensions</xpath>
+
+      <value>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>1.35</flightSpeedFactor>
+          <maxStaminaFactor>0.75</maxStaminaFactor>
+          <recoveryFactor>0.90</recoveryFactor>
+          <staminaDrainFactor>1.25</staminaDrainFactor>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- =========================================================
+       ЧЕЙНДЖЛИНГИ ОБОИХ ВИДОВ
+       Магические крылья. Экономичный полёт.
+       ========================================================= -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[
+      defName="Pony_Changeling"
+      or defName="Pony_Changedling"
+    ]</xpath>
+
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/*[
+        defName="Pony_Changeling"
+        or defName="Pony_Changedling"
+      ]/modExtensions</xpath>
+
+      <value>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>1.00</flightSpeedFactor>
+          <maxStaminaFactor>1.15</maxStaminaFactor>
+          <recoveryFactor>1.25</recoveryFactor>
+          <staminaDrainFactor>0.85</staminaDrainFactor>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- =========================================================
+       ГРИФОН
+       Пернатые большие крылья. Сильный, но тяжёлый.
+       ========================================================= -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="Pony_Griffon"]</xpath>
+
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/*[
+        defName="Pony_Griffon"
+      ]/modExtensions</xpath>
+
+      <value>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>1.00</flightSpeedFactor>
+          <maxStaminaFactor>0.95</maxStaminaFactor>
+          <recoveryFactor>0.95</recoveryFactor>
+          <staminaDrainFactor>1.05</staminaDrainFactor>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- =========================================================
+       ГИППОГРИФ
+       Пернатые средние крылья. Универсальный профиль.
+       ========================================================= -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="Pony_Hippogriff"]</xpath>
+
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/*[
+        defName="Pony_Hippogriff"
+      ]/modExtensions</xpath>
+
+      <value>
+        <li Class="FlightTraits.FlightTraitExtension">
+          <flightSpeedFactor>1.10</flightSpeedFactor>
+          <maxStaminaFactor>1.05</maxStaminaFactor>
+          <recoveryFactor>1.05</recoveryFactor>
+          <staminaDrainFactor>0.95</staminaDrainFactor>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>
