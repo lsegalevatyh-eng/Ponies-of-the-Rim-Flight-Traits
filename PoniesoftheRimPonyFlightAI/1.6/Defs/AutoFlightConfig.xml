@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PonyAutoFlight.AutoFlightConfigDef>
+    <defName>PAF_Defaults</defName>
+    <evaluationInterval>60</evaluationInterval>
+    <landingCheckInterval>5</landingCheckInterval>
+    <landingDistance>10</landingDistance>
+    <defaultPathLength>50</defaultPathLength>
+    <minPathLength>30</minPathLength>
+    <maxPathLength>300</maxPathLength>
+    <defaultStartStamina>0.90</defaultStartStamina>
+    <minStartStamina>0.80</minStartStamina>
+    <maxStartStamina>0.99</maxStartStamina>
+    <defaultStopStamina>0.50</defaultStopStamina>
+    <minStopStamina>0.20</minStopStamina>
+    <maxStopStamina>0.60</maxStopStamina>
+  </PonyAutoFlight.AutoFlightConfigDef>
+</Defs>

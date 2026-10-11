@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Ponies of the Rim — Flight Ai</name>
+  <author>Local</author>
+  <packageId>local.ponyautoflight</packageId>
+
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+
+  <description>
+ВНИМАНИЕ: для этого аддона требуется версия Ponies of the Rim из GitHub, нестабильная ветка:
+https://github.com/DJeck12/Ponies-of-the-Rim/tree/unstable
+
+Ponies of the Rim — Flight AI добавляет автоматическое управление полётом для летающих рас.
+
+Мод создан с помощью GPT-6.1 Sol.
+
+--------------------------------------------------------------------------------------------
+
+ATTENTION: This add-on requires the GitHub version of Ponies of the Rim from the unstable branch:
+https://github.com/DJeck12/Ponies-of-the-Rim/tree/unstable
+
+Ponies of the Rim — Flight AI adds automatic flight control for flying races.
+
+The mod was created using GPT-6.1 Sol.
+
+
+
+  </description>
+
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+    </li>
+	<li>
+      <packageId>Pony.PoniesOfTheRim.Core</packageId>
+      <displayName>Ponies of the Rim - Core</displayName>
+    </li>
+  </modDependencies>
+
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+</ModMetaData>

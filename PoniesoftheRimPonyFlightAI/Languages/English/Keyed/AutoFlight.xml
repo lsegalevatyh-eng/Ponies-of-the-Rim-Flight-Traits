@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PAF_Command>Flight settings</PAF_Command>
+  <PAF_CommandDesc>Configure this colonist's automatic flight and permission to fly.</PAF_CommandDesc>
+  <PAF_Title>Flight settings</PAF_Title>
+  <PAF_Allowed>Allow flight</PAF_Allowed>
+  <PAF_PathLength>Take off when the remaining path exceeds {0} cells</PAF_PathLength>
+  <PAF_StartStamina>Take off with stamina above {0}%</PAF_StartStamina>
+  <PAF_StopStamina>Land with stamina below {0}%</PAF_StopStamina>
+  <PAF_Reset>Reset thresholds</PAF_Reset>
+</LanguageData>

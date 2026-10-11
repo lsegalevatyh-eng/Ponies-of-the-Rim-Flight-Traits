@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PAF_Command>Настройки полёта</PAF_Command>
+  <PAF_CommandDesc>Настроить автоматический полёт и разрешение летать для этого колониста.</PAF_CommandDesc>
+  <PAF_Title>Настройки полёта</PAF_Title>
+  <PAF_Allowed>Разрешить полёт</PAF_Allowed>
+  <PAF_PathLength>Взлетать, если оставшийся путь длиннее {0} клеток</PAF_PathLength>
+  <PAF_StartStamina>Взлетать при выносливости выше {0}%</PAF_StartStamina>
+  <PAF_StopStamina>Приземляться при выносливости ниже {0}%</PAF_StopStamina>
+  <PAF_Reset>Сбросить пороги</PAF_Reset>
+</LanguageData>
