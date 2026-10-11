@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>MA_RemoveModule</defName>
+    <driverClass>ModularArmor.JobDriver_RemoveModule</driverClass>
+    <reportString>Removing an armor module.</reportString>
+  </JobDef>
+
+</Defs>

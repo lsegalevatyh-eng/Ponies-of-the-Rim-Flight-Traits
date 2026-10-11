@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============================================================ -->
+  <!-- СЕРВОПРИВОДЫ (базовые)                                        -->
+  <!-- ============================================================ -->
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleServo</defName>
+    <label>servo drives</label>
+    <description>Switchable powered cuirass module. Adds 0.5 movement speed, compensating for the armor penalty. Consumes 0.5 energy per 60 ticks. Cannot be combined with reinforced servo drives.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>       <!-- Можно ставить в кирасу -->
+        <slots>1</slots>                     <!-- Занимает 1 слот -->
+        <exclusiveGroup>Servo</exclusiveGroup> <!-- Группа несовместимости (нельзя с усиленными) -->
+
+        <active>true</active>                <!-- Требует энергии и включения -->
+        <consumption>0.5</consumption>       <!-- Расход энергии за 60 тиков -->
+        <moveSpeed>0.5</moveSpeed>           <!-- Бонус к скорости передвижения -->
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+
+  <!-- ============================================================ -->
+  <!-- УСИЛЕННЫЕ СЕРВОПРИВОДЫ                                        -->
+  <!-- ============================================================ -->
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleServoAdvanced</defName>
+    <label>reinforced servo drives</label>
+    <description>Switchable powered cuirass module. Normally adds 0.5 movement speed and consumes 0.5 energy per 60 ticks. Overload replaces the bonus with 1.0 for one in-game hour and adds 4 energy consumption per 60 ticks. Cooldown is three in-game hours after overload ends.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>       <!-- Можно ставить в кирасу -->
+        <slots>1</slots>                     <!-- Занимает 1 слот -->
+        <exclusiveGroup>Servo</exclusiveGroup> <!-- Группа несовместимости (нельзя с обычными) -->
+
+        <active>true</active>                <!-- Требует энергии и включения -->
+        <consumption>0.5</consumption>       <!-- Базовый расход энергии за 60 тиков -->
+        <moveSpeed>0.5</moveSpeed>           <!-- Базовый бонус к скорости -->
+
+        <!-- ==================================================== -->
+        <!-- СПОСОБНОСТЬ: ПЕРЕГРУЗКА                                -->
+        <!-- ==================================================== -->
+        <overload>true</overload>                       <!-- Есть способность перегрузки -->
+        <overloadMoveSpeed>2</overloadMoveSpeed>        <!-- Бонус к скорости во время перегрузки -->
+        <overloadExtraConsumption>6</overloadExtraConsumption> <!-- Доп. расход энергии за 60 тиков -->
+        <overloadDuration>2500</overloadDuration>       <!-- Длительность перегрузки (тиков, 1 игровой час) -->
+        <overloadCooldown>7500</overloadCooldown>       <!-- Перезарядка (тиков, 3 игровых часа) -->
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+
+  <!-- ============================================================ -->
+  <!-- ЭКСПЕРИМЕНТАЛЬНЫЕ СЕРВОПРИВОДЫ (с критической перегрузкой)      -->
+  <!-- ============================================================ -->
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleServoExperimental</defName>
+    <label>experimental servo drives</label>
+    <description>An experimental powered cuirass module with standard and critical overload modes. Normal operation adds 0.5 movement speed. Ordinary overload replaces this bonus with 1.0. Critical overload replaces it with 4.0, but steadily wears down the cuirass. Both overload modes last one in-game hour and share a cooldown. Critical operation automatically stops when armor durability reaches its safety threshold. Cannot be combined with other servo drives.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+
+        <forCuirass>true</forCuirass>       <!-- Можно ставить в кирасу -->
+        <forHelmet>false</forHelmet>         <!-- Нельзя ставить в шлем -->
+
+        <slots>1</slots>                     <!-- Занимает 1 слот -->
+        <exclusiveGroup>Servo</exclusiveGroup> <!-- Группа несовместимости -->
+
+        <installTicks>2500</installTicks>    <!-- Установка: 1 игровой час -->
+        <removeTicks>2500</removeTicks>      <!-- Снятие: 1 игровой час -->
+
+        <active>true</active>                <!-- Требует энергии и включения -->
+        <consumption>0.5</consumption>       <!-- Базовый расход энергии за 60 тиков -->
+        <moveSpeed>0.5</moveSpeed>           <!-- Базовый бонус к скорости -->
+
+        <!-- ==================================================== -->
+        <!-- ОБЫЧНАЯ ПЕРЕГРУЗКА (как у усиленных)                  -->
+        <!-- ==================================================== -->
+        <overload>true</overload>                       <!-- Есть обычная перегрузка -->
+        <overloadMoveSpeed>1</overloadMoveSpeed>        <!-- Бонус к скорости -->
+        <overloadExtraConsumption>4</overloadExtraConsumption> <!-- Доп. расход -->
+        <overloadDuration>2500</overloadDuration>       <!-- Длительность (1 игровой час) -->
+        <overloadCooldown>7500</overloadCooldown>       <!-- Перезарядка (3 игровых часа) -->
+
+        <!-- ==================================================== -->
+        <!-- КРИТИЧЕСКАЯ ПЕРЕГРУЗКА (заменяет обычный бонус)       -->
+        <!-- ==================================================== -->
+        <criticalOverload>true</criticalOverload>                       <!-- Есть критическая перегрузка -->
+        <criticalOverloadMoveSpeed>4</criticalOverloadMoveSpeed>        <!-- Бонус к скорости (+4) -->
+        <criticalOverloadExtraConsumption>8</criticalOverloadExtraConsumption> <!-- Доп. расход -->
+        <criticalOverloadDuration>2500</criticalOverloadDuration>       <!-- Длительность (1 игровой час) -->
+        <criticalOverloadCooldown>7500</criticalOverloadCooldown>       <!-- Перезарядка (3 игровых часа) -->
+
+        <!-- Урон броне при критической перегрузке -->
+        <criticalArmorDamage>1</criticalArmorDamage>                    <!-- 1 HP брони за интервал -->
+        <criticalArmorDamageInterval>250</criticalArmorDamageInterval>  <!-- Интервал (тиков, 250 = ~4 сек) -->
+
+        <!-- Порог остановки -->
+        <criticalMinimumHitPoints>1</criticalMinimumHitPoints>          <!-- Остановка при HP брони ≤ 1 -->
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

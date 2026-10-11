@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleBatteryMini</defName>
+    <label>mini battery module</label>
+    <description>A cheap, compact energy cell for the modular armor platform. Adds 100 energy capacity to the armor piece in which it is installed. Generates no energy on its own — it only extends the reserve available to the energy core.
+
+Fits into either a cuirass or a helmet, making it the only battery compatible with helmet systems. Helmet batteries draw from the cuirass's surplus output once the cuirass's own storage is full.
+
+The simplest option, and the only one light enough for a helmet. Small, cheap, unremarkable — but without it, a helmet cannot power anything more demanding than a targeting sensor.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>true</forHelmet>
+
+        <slots>1</slots>
+		<maxCopies>3</maxCopies>
+        <active>false</active>
+        <consumption>0</consumption>
+
+        <batteryCapacity>100</batteryCapacity>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleBatteryMedium</defName>
+    <label>Medium battery module</label>
+    <description>Medium battery module
+
+The cheapest practical energy cell for a modular cuirass. Adds 200 energy capacity to the armor piece in which it is installed. Generates no energy — it simply stores more of what the energy core produces.
+
+Cheap to build, compact, and effective: a single module gives a soldier enough reserve to run a shield through a short engagement without draining the core. Cannot be installed in a helmet.
+
+The workhorse of modular armor. Not impressive, not expensive — just reliable. Most soldiers never install anything else.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>false</forHelmet>
+
+        <slots>1</slots>
+		<maxCopies>3</maxCopies>
+        <active>false</active>
+        <consumption>0</consumption>
+
+        <batteryCapacity>200</batteryCapacity>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleBatteryLarge</defName>
+    <label>Large battery module</label>
+    <description>Large battery module
+
+An advanced, expensive energy cell for the modular cuirass. Adds 450 energy capacity to the armor piece in which it is installed. Generates no energy — it merely extends how long the core can sustain its output.
+
+Occupies two slots. Costly to produce and requires a skilled craftsman, but the reserve it provides can keep a shield and overload running through an extended firefight. Cannot be installed in a helmet.
+
+A serious investment. Two slots and a heavy price tag — but for soldiers who need sustained power, nothing else comes close.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>false</forHelmet>
+
+        <slots>2</slots>
+        <active>false</active>
+        <consumption>0</consumption>
+
+        <batteryCapacity>450</batteryCapacity>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  
+    <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleBatteryHuge</defName>
+    <label>Huge battery module</label>
+    <description>Huge battery module
+
+The most expensive and most powerful energy reserve ever built for the modular cuirass. Adds 1200 energy capacity to the armor piece in which it is installed. Generates no energy — it is purely a reservoir.
+
+Occupies three slots. Requires rare components and an exceptional craftsman. Even on a legendary cuirass it takes a significant share of the available space — but the reserve is enough to run every active system for hours without the core ever falling behind.
+
+A monument to paranoia and wealth. Only the richest colonies can afford one, and only the most heavily modified armor can carry it. But when it is installed, the wearer stops worrying about power entirely.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>false</forHelmet>
+
+        <slots>3</slots>
+        <active>false</active>
+        <consumption>0</consumption>
+
+        <batteryCapacity>1200</batteryCapacity>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

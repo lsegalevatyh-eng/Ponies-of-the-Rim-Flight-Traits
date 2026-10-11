@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--
+    Порядок значений:
+    0 — Awful      — ужасное
+    1 — Poor       — плохое
+    2 — Normal     — нормальное
+    3 — Good       — хорошее
+    4 — Excellent  — отличное
+    5 — Masterwork — шедевр
+    6 — Legendary  — легендарное
+  -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MA_ModularCuirass"]/comps/li[@Class="ModularArmor.CompProperties_ModuleSlots"]</xpath>
+    <value>
+      <slotsByQuality>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>8</li>
+      </slotsByQuality>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MA_ModularHelmet"]/comps/li[@Class="ModularArmor.CompProperties_ModuleSlots"]</xpath>
+    <value>
+      <slotsByQuality>
+        <li>0</li>
+        <li>1</li>
+        <li>1</li>
+        <li>2</li>
+        <li>2</li>
+        <li>3</li>
+        <li>5</li>
+      </slotsByQuality>
+    </value>
+  </Operation>
+
+</Patch>

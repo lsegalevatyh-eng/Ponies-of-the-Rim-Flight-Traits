@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============================================================ -->
+  <!-- ГЕНЕРАТОР ЩИТА                                                -->
+  <!-- ============================================================ -->
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleShield</defName>
+    <label>shield generator</label>
+    <description>Projects a personal shield that absorbs ranged and explosive damage. Does not protect against melee attacks and prevents the wearer from firing projectile weapons while the shield is operating. EMP instantly disables the shield.
+
+Shield capacity, protection and regeneration speed can be adjusted. Capacity affects restart energy only. Protection affects energy per restored point only. Regeneration speed splits its cost adjustment equally between restart energy and energy per restored point. Range upgrades allow settings beyond the generator's standard limits.
+
+Energy is spent only on actual shield regeneration and the separate restart payment. A fully restored shield and a shield waiting to restart consume no regeneration energy.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>       <!-- Можно ставить в кирасу -->
+        <forHelmet>false</forHelmet>         <!-- Нельзя ставить в шлем -->
+
+        <slots>1</slots>                     <!-- Занимает 1 слот -->
+        <maxCopies>1</maxCopies>             <!-- Только 1 копия -->
+        <exclusiveGroup>Shield</exclusiveGroup> <!-- Группа несовместимости -->
+
+        <active>true</active>                <!-- Требует энергии и включения -->
+
+        <!-- Базовая цена энергии за 1 восстановленное очко щита -->
+        <consumption>1</consumption>
+
+        <!-- Расход энергии в покое (0 — не тратит, когда щит полный) -->
+        <consumptionIdle>0</consumptionIdle>
+
+        <!-- Это щит -->
+        <shield>true</shield>
+
+        <!-- Базовый максимум прочности щита -->
+        <shieldMax>110</shieldMax>
+
+        <!-- Базовая потеря прочности за 1 урона -->
+        <shieldLossPerDamage>3.05</shieldLossPerDamage>
+
+        <!-- Базовое восстановление HP за 60 тиков -->
+        <shieldRecharge>10</shieldRecharge>
+
+        <!-- Базовая цена перезапуска после пробития или EMP -->
+        <shieldRestartCost>50</shieldRestartCost>
+
+        <!-- Задержка перед перезапуском (тиков) -->
+        <shieldResetTicks>3200</shieldResetTicks>
+
+        <!-- Доля максимума при перезапуске (0 — с нуля) -->
+        <shieldResetFraction>0</shieldResetFraction>
+
+        <!-- Запрещает стрельбу при работе щита -->
+        <blocksShooting>true</blocksShooting>
+
+        <!-- ==================================================== -->
+        <!-- ДИАПАЗОНЫ НАСТРОЕК (1.0 — базовая)                    -->
+        <!-- ==================================================== -->
+
+        <!-- Минимум ползунка ёмкости -->
+        <shieldCapacityMin>0.5</shieldCapacityMin>
+
+        <!-- Максимум ползунка ёмкости -->
+        <shieldCapacityMax>3.0</shieldCapacityMax>
+
+        <!-- Минимум ползунка защиты -->
+        <shieldProtectionMin>0.5</shieldProtectionMin>
+
+        <!-- Максимум ползунка защиты -->
+        <shieldProtectionMax>3.0</shieldProtectionMax>
+
+        <!-- Минимум ползунка скорости восстановления -->
+        <shieldRechargeMin>0.5</shieldRechargeMin>
+
+        <!-- Максимум ползунка скорости восстановления -->
+        <shieldRechargeMax>3.0</shieldRechargeMax>
+
+        <!-- ==================================================== -->
+        <!-- КОЭФФИЦИЕНТЫ СТОИМОСТИ                               -->
+        <!-- Below — ниже 1.0, Above — выше 1.0                  -->
+        <!-- ==================================================== -->
+
+        <!-- ЁМКОСТЬ: влияет ТОЛЬКО на цену перезапуска -->
+        <!-- Скорость снижения цены перезапуска при ёмкости < 1.0 -->
+        <shieldCapacityCostCoefficientBelow>0.2</shieldCapacityCostCoefficientBelow>
+        <!-- Скорость роста цены перезапуска при ёмкости > 1.0 -->
+        <shieldCapacityCostCoefficientAbove>0.20</shieldCapacityCostCoefficientAbove>
+
+        <!-- ЗАЩИТА: влияет ТОЛЬКО на цену ремонта за очко -->
+        <!-- Скорость снижения цены ремонта при защите < 1.0 -->
+        <shieldProtectionCostCoefficientBelow>0.15</shieldProtectionCostCoefficientBelow>
+        <!-- Скорость роста цены ремонта при защите > 1.0 -->
+        <shieldProtectionCostCoefficientAbove>0.15</shieldProtectionCostCoefficientAbove>
+
+        <!-- СКОРОСТЬ: влияет на ОБЕ цены (50/50) -->
+        <!-- Скорость снижения цен при скорости < 1.0 -->
+        <shieldRechargeCostCoefficientBelow>0.2</shieldRechargeCostCoefficientBelow>
+        <!-- Скорость роста цен при скорости > 1.0 -->
+        <shieldRechargeCostCoefficientAbove>0.20</shieldRechargeCostCoefficientAbove>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+
+  <!-- ============================================================ -->
+  <!-- АПГРЕЙД: РАСШИРЕНИЕ ЁМКОСТИ                                   -->
+  <!-- ============================================================ -->
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleShieldBooster</defName>
+    <label>shield capacity expander</label>
+    <description>Expands the shield capacity setting limit from 3.0 to 6.0, allowing the shield to store more strength before it breaks.
+
+Does not automatically increase capacity: adjust the capacity setting in the shield configuration window. Higher capacity increases restart energy, not energy per restored point.
+
+Requires a shield generator. This passive upgrade consumes no energy on its own.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>       <!-- Можно ставить в кирасу -->
+        <forHelmet>false</forHelmet>         <!-- Нельзя ставить в шлем -->
+
+        <slots>1</slots>                     <!-- Занимает 1 слот -->
+        <maxCopies>1</maxCopies>             <!-- Только 1 копия -->
+        <exclusiveGroup>ShieldUpgrade</exclusiveGroup> <!-- Группа несовместимости -->
+
+        <installTicks>2500</installTicks>    <!-- Установка: 1 игровой час -->
+        <removeTicks>2500</removeTicks>      <!-- Снятие: 1 игровой час -->
+        <active>false</active>               <!-- Пассивный, без энергии -->
+
+        <!-- Дополнительный диапазон ёмкости 3.0–6.0 -->
+        <shieldSettingRanges>
+          <li>
+            <setting>Capacity</setting>      <!-- Расширяет ёмкость -->
+            <min>3.0</min>                   <!-- Начало диапазона -->
+            <max>6.0</max>                   <!-- Конец диапазона -->
+            <!-- Цена ёмкости < 1.0 в доп. диапазоне -->
+            <coefficientBelow>0.8</coefficientBelow>
+            <!-- Цена ёмкости > 1.0 в доп. диапазоне -->
+            <coefficientAbove>0.8</coefficientAbove>
+          </li>
+        </shieldSettingRanges>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+
+  <!-- ============================================================ -->
+  <!-- АПГРЕЙД: УСИЛЕНИЕ ЗАЩИТЫ                                      -->
+  <!-- ============================================================ -->
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleShieldDurability</defName>
+    <label>shield protection enhancer</label>
+    <description>Expands the shield protection setting limit from 3.0 to 6.0. Higher protection reduces the shield strength lost when absorbing damage.
+
+Does not automatically increase protection: adjust the protection setting in the shield configuration window. Settings above the standard range increase the energy cost of restoring each shield point.
+
+Requires a shield generator. This passive upgrade consumes no energy on its own.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>       <!-- Можно ставить в кирасу -->
+        <forHelmet>false</forHelmet>         <!-- Нельзя ставить в шлем -->
+
+        <slots>1</slots>                     <!-- Занимает 1 слот -->
+        <maxCopies>1</maxCopies>             <!-- Только 1 копия -->
+        <exclusiveGroup>ShieldUpgrade</exclusiveGroup> <!-- Группа несовместимости -->
+
+        <installTicks>2500</installTicks>    <!-- Установка: 1 игровой час -->
+        <removeTicks>2500</removeTicks>      <!-- Снятие: 1 игровой час -->
+        <active>false</active>               <!-- Пассивный, без энергии -->
+
+        <!-- Дополнительный диапазон защиты 3.0–6.0 -->
+        <shieldSettingRanges>
+          <li>
+            <setting>Protection</setting>    <!-- Расширяет защиту -->
+            <min>3.0</min>                   <!-- Начало диапазона -->
+            <max>6.0</max>                   <!-- Конец диапазона -->
+            <!-- Цена защиты < 1.0 в доп. диапазоне -->
+            <coefficientBelow>0.8</coefficientBelow>
+            <!-- Цена защиты > 1.0 в доп. диапазоне -->
+            <coefficientAbove>0.8</coefficientAbove>
+          </li>
+        </shieldSettingRanges>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+
+  <!-- ============================================================ -->
+  <!-- АПГРЕЙД: УСКОРЕНИЕ ВОССТАНОВЛЕНИЯ                             -->
+  <!-- ============================================================ -->
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleShieldRecharge</defName>
+    <label>shield regeneration accelerator</label>
+    <description>Expands the shield regeneration speed setting limit from 3.0 to 6.0, allowing lost shield strength to be restored faster. Does not shorten the restart delay after the shield breaks.
+
+Does not automatically increase regeneration speed: adjust the speed setting in the shield configuration window. Higher settings restore more points per tick. The speed cost adjustment is split equally between restart energy and energy per restored point.
+
+Requires a shield generator. This passive upgrade consumes no energy on its own.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>       <!-- Можно ставить в кирасу -->
+        <forHelmet>false</forHelmet>         <!-- Нельзя ставить в шлем -->
+
+        <slots>1</slots>                     <!-- Занимает 1 слот -->
+        <maxCopies>1</maxCopies>             <!-- Только 1 копия -->
+        <exclusiveGroup>ShieldUpgrade</exclusiveGroup> <!-- Группа несовместимости -->
+
+        <installTicks>2500</installTicks>    <!-- Установка: 1 игровой час -->
+        <removeTicks>2500</removeTicks>      <!-- Снятие: 1 игровой час -->
+        <active>false</active>               <!-- Пассивный, без энергии -->
+
+        <!-- Дополнительный диапазон скорости 3.0–6.0 -->
+        <shieldSettingRanges>
+          <li>
+            <setting>Recharge</setting>      <!-- Расширяет скорость -->
+            <min>3.0</min>                   <!-- Начало диапазона -->
+            <max>6.0</max>                   <!-- Конец диапазона -->
+            <!-- Цена скорости < 1.0 в доп. диапазоне -->
+            <coefficientBelow>0.8</coefficientBelow>
+            <!-- Цена скорости > 1.0 в доп. диапазоне -->
+            <coefficientAbove>0.8</coefficientAbove>
+          </li>
+        </shieldSettingRanges>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

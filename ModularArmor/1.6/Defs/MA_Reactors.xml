@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+ <!-- Энергоядро -->
+ 
+<ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleCoreI</defName>
+    <label>energy core I</label>
+    <description>Cuirass power source. Stores 100 energy and restores 6 energy per 60 ticks while the armor is worn. Uses one slot.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <slots>1</slots>
+        <exclusiveGroup>Core</exclusiveGroup>
+        <coreCapacity>100</coreCapacity>
+        <coreRecharge>6</coreRecharge>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  
+  <!-- Урановый реактор -->
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleReactorUranium</defName>
+    <label>uranium reactor module</label>
+    <description>A fuel-powered reactor for a modular cuirass. Replaces the standard energy core. Stores 100 energy and generates 15 energy per 60 ticks while the cuirass is worn and fuel is available. Its internal fuel compartment holds 60 uranium. One uranium powers the reactor for one in-game hour. Uses one slot. Installation takes one in-game hour.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>false</forHelmet>
+
+        <slots>1</slots>
+        <installTicks>2500</installTicks>
+        <exclusiveGroup>Core</exclusiveGroup>
+
+        <coreCapacity>100</coreCapacity>
+        <coreRecharge>15</coreRecharge>
+
+        <reactorFuel>Uranium</reactorFuel>
+        <reactorFuelCapacity>60</reactorFuelCapacity>
+        <reactorFuelPerCycle>1</reactorFuelPerCycle>
+        <reactorCycleTicks>2500</reactorCycleTicks>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Химтопливный реактор -->
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleReactorChemfuel</defName>
+    <label>chemfuel reactor module</label>
+    <description>A fuel-powered reactor for a modular cuirass. Replaces the standard energy core. Stores 100 energy and generates 15 energy per 60 ticks while the cuirass is worn and fuel is available. Its internal fuel compartment holds 60 chemfuel. Two chemfuel power the reactor for one in-game hour. Uses one slot. Installation takes one in-game hour.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>false</forHelmet>
+
+        <slots>1</slots>
+        <installTicks>2500</installTicks>
+        <exclusiveGroup>Core</exclusiveGroup>
+
+        <coreCapacity>100</coreCapacity>
+        <coreRecharge>15</coreRecharge>
+
+        <reactorFuel>Chemfuel</reactorFuel>
+        <reactorFuelCapacity>60</reactorFuelCapacity>
+        <reactorFuelPerCycle>2</reactorFuelPerCycle>
+        <reactorCycleTicks>2500</reactorCycleTicks>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Архо-реактор: без рецепта изготовления -->
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleReactorArchotech</defName>
+    <label>archotech reactor module</label>
+    <description>An exceptionally rare archotech energy source for a modular cuirass. Replaces the standard energy core. Stores 100 energy and generates 20 energy per 60 ticks while the cuirass is worn. Requires no fuel. Cannot be manufactured. Uses one slot. Installation takes one in-game hour.</description>
+
+    <techLevel>Archotech</techLevel>
+
+    <statBases>
+      <MarketValue>12000</MarketValue>
+    </statBases>
+
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>false</forHelmet>
+
+        <slots>1</slots>
+        <installTicks>2500</installTicks>
+        <exclusiveGroup>Core</exclusiveGroup>
+
+        <coreCapacity>100</coreCapacity>
+        <coreRecharge>20</coreRecharge>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

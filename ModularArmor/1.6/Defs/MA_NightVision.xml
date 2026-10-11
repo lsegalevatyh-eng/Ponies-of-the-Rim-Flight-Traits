@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ModularArmor.ArmorSystemDef>
+    <defName>MA_SystemNightVision</defName>
+    <systemClass>ModularArmor.ArmorNightVisionSystem</systemClass>
+    <order>46</order>
+  </ModularArmor.ArmorSystemDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleNightVision</defName>
+    <label>night vision module</label>
+    <description>A manually activated night vision system for a modular helmet. Removes darkness penalties applied to the wearer's stats by lighting multipliers. Continuously consumes the helmet's own energy while enabled, including in daylight. Does not illuminate the surrounding area.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>false</forCuirass>
+        <forHelmet>true</forHelmet>
+
+        <slots>1</slots>
+        <exclusiveGroup>NightVision</exclusiveGroup>
+        <installTicks>2500</installTicks>
+      </li>
+
+      <li Class="ModularArmor.NightVisionModuleExtension">
+        <energyPerSecond>2</energyPerSecond>
+        <iconPath>UI/Commands/ForbidOff</iconPath>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

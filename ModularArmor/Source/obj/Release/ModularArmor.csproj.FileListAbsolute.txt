@@ -1,0 +1,7 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModularArmor\1.6\Assemblies\ModularArmor.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModularArmor\Source\obj\Release\ModularArmor.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModularArmor\Source\obj\Release\ModularArmor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModularArmor\Source\obj\Release\ModularArmor.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModularArmor\Source\obj\Release\ModularArmor.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModularArmor\1.6\Assemblies\ModularArmor.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ModularArmor\Source\obj\Release\ModularArmor.pdb

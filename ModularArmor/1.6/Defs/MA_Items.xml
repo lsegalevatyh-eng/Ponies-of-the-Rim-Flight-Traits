@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef Name="MA_ArmorBase" ParentName="ApparelBase" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <smeltable>false</smeltable>
+
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <statBases>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.6</ArmorRating_Heat>
+    </statBases>
+
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li><only>(1,1,1)</only></li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+              <!-- Модульный нагрудник  --> 
+  <ThingDef ParentName="MA_ArmorBase">
+    <defName>MA_ModularCuirass</defName>
+    <label>modular cuirass</label>
+    <description>A modular cuirass is heavy powered armor based on cataphract plates. Four universal slots allow its wearer to reconfigure protection, power systems and combat capabilities in the field. Without modules, it provides the protection of standard cataphract armor, but its bulk makes the wearer an easier target. Its true strength lies in adaptability: a warrior who fills every slot is more dangerous than any standard imperial soldier.\n\nThe enlarged chassis is a deliberate compromise: additional modules require space, and space requires size. Every cataphract who wears this armor learns one lesson — protection is not given, it is installed.</description>
+
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/CataphractArmor/CataphractArmor</texPath>
+    </graphicData>
+
+    <uiIconScale>1.25</uiIconScale>
+
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Mass>15</Mass>
+      <MarketValue>6500</MarketValue>
+      <EquipDelay>17</EquipDelay>
+      <Insulation_Cold>70</Insulation_Cold>
+      <Insulation_Heat>12</Insulation_Heat>
+    </statBases>
+
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
+    </equippedStatOffsets>
+
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CataphractArmor/CataphractArmor</wornGraphicPath>
+
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+    </apparel>
+
+    <comps>
+      <li Class="ModularArmor.CompProperties_ModuleSlots">
+        <slotCount>4</slotCount>
+        <allowArmorReinforcement>true</allowArmorReinforcement>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+              <!-- Модульный шлем  --> 
+  <ThingDef ParentName="MA_ArmorBase">
+    <defName>MA_ModularHelmet</defName>
+    <label>modular helmet</label>
+    <description>A modular helmet is a heavy powered helmet based on cataphract plates. Two universal slots allow its wearer to install sensory, targeting or defensive systems as needed. Without modules, it provides the protection of a standard cataphract helmet. With them, it becomes a command node, targeting computer or life-support system.\n\nIts enlarged chassis is the price of flexibility. Where a standard imperial helmet is sealed and unchanging, this one is open — waiting for the right module to make it whole.</description>
+
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/CataphractArmorHelmet/CataphractHelmet</texPath>
+      <drawSize>(0.9,0.9)</drawSize>
+    </graphicData>
+
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Mass>2</Mass>
+      <MarketValue>2500</MarketValue>
+      <EquipDelay>6</EquipDelay>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+    </statBases>
+
+    <thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+
+    <equippedStatOffsets>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.68</VacuumResistance>
+    </equippedStatOffsets>
+
+    <apparel>
+      <parentTagDef>ApparelHead</parentTagDef>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CataphractArmorHelmet/CataphractHelmet</wornGraphicPath>
+
+      <layers>
+        <li>Overhead</li>
+      </layers>
+
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+
+    <comps>
+      <li Class="ModularArmor.CompProperties_ModuleSlots">
+        <slotCount>2</slotCount>
+        <allowArmorReinforcement>false</allowArmorReinforcement>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="MA_ModuleBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <techLevel>Spacer</techLevel>
+
+    <drawerType>MapMeshOnly</drawerType>
+    <altitudeLayer>Item</altitudeLayer>
+
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <stackLimit>10</stackLimit>
+    <drawGUIOverlay>true</drawGUIOverlay>
+
+    <graphicData>
+      <texPath>Modules/module</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.6</drawSize>
+      <color>(1,1,1)</color>
+    </graphicData>
+
+    <statBases>
+      <Mass>1</Mass>
+      <MarketValue>500</MarketValue>
+      <Flammability>0</Flammability>
+    </statBases>
+
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+
+</Defs>

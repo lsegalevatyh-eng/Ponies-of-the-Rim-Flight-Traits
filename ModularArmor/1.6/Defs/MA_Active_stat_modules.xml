@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleArmorReinforcementActive</defName>
+    <label>powered reinforced armor plating</label>
+    <description>Powered cuirass module. Improves sharp, blunt, and heat protection by 30 percentage points while enabled and powered. Reduces movement speed by 0.1 while operating. Energy consumption: 2 Wh.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>false</forHelmet>
+        <slots>1</slots>
+        <installTicks>2500</installTicks>
+        <removeTicks>2500</removeTicks>
+
+        <active>true</active>
+        <consumption>2</consumption>
+
+        <statOffsets>
+          <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.30</ArmorRating_Heat>
+          <MoveSpeed>-0.1</MoveSpeed>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleBallisticActive</defName>
+    <label>powered ballistic armor plates</label>
+    <description>Powered cuirass module. Improves sharp protection by 22.5 percentage points while enabled and powered. Reduces movement speed by 0.1 while operating. Energy consumption: 2 Wh.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>false</forHelmet>
+        <slots>1</slots>
+        <installTicks>2500</installTicks>
+        <removeTicks>2500</removeTicks>
+
+        <active>true</active>
+        <consumption>2</consumption>
+
+        <statOffsets>
+          <ArmorRating_Sharp>0.225</ArmorRating_Sharp>
+          <MoveSpeed>-0.1</MoveSpeed>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleImpactActive</defName>
+    <label>powered impact-dampening liner</label>
+    <description>Powered cuirass module. Improves blunt protection by 30 percentage points while enabled and powered. Reduces movement speed by 0.1 while operating. Energy consumption: 2 Wh.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>false</forHelmet>
+        <slots>1</slots>
+        <installTicks>2500</installTicks>
+        <removeTicks>2500</removeTicks>
+
+        <active>true</active>
+        <consumption>2</consumption>
+
+        <statOffsets>
+          <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+          <MoveSpeed>-0.1</MoveSpeed>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleFireproofActive</defName>
+    <label>powered thermal shielding inserts</label>
+    <description>Powered cuirass or helmet module. Improves heat protection by 37.5 percentage points while enabled and powered. Energy consumption: 2 Wh.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>true</forHelmet>
+        <slots>1</slots>
+        <installTicks>2500</installTicks>
+        <removeTicks>2500</removeTicks>
+
+        <active>true</active>
+        <consumption>2</consumption>
+
+        <statOffsets>
+          <ArmorRating_Heat>0.375</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleColdActive</defName>
+    <label>powered cold-weather insulation</label>
+    <description>Powered cuirass or helmet module. Increases cold insulation by 22.5 degrees while enabled and powered. Energy consumption: 2 Wh.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>true</forHelmet>
+        <slots>1</slots>
+        <installTicks>2500</installTicks>
+        <removeTicks>2500</removeTicks>
+
+        <active>true</active>
+        <consumption>2</consumption>
+
+        <statOffsets>
+          <Insulation_Cold>22.5</Insulation_Cold>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleHeatActive</defName>
+    <label>powered heat-dissipation liner</label>
+    <description>Powered cuirass or helmet module. Increases heat insulation by 15 degrees while enabled and powered. Energy consumption: 2 Wh.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>true</forHelmet>
+        <slots>1</slots>
+        <installTicks>2500</installTicks>
+        <removeTicks>2500</removeTicks>
+
+        <active>true</active>
+        <consumption>2</consumption>
+
+        <statOffsets>
+          <Insulation_Heat>15</Insulation_Heat>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

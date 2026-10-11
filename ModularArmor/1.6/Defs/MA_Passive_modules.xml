@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleArmorReinforcement</defName>
+    <label>Passive reinforced armor plating</label>
+    <description>Passive cuirass module. Improves protection against sharp, blunt, and heat damage by 20 percentage points. Reduces the wearer's movement speed by 0.1. Requires no power.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <statOffsets>
+          <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.20</ArmorRating_Heat>
+          <MoveSpeed>-0.1</MoveSpeed>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleBallistic</defName>
+    <label>Passive ballistic armor plates</label>
+    <description>Passive cuirass module. Adds 15 percentage points to sharp armor. The added weight reduces the wearer's movement speed by 0.1. Requires no power.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <statOffsets>
+          <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+          <MoveSpeed>-0.1</MoveSpeed>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleImpact</defName>
+    <label>Passive impact-dampening liner</label>
+    <description>Passive cuirass module. Adds 20 percentage points to blunt armor. Its added mass reduces the wearer's movement speed by 0.1. Requires no power.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <statOffsets>
+          <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+          <MoveSpeed>-0.1</MoveSpeed>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleFireproof</defName>
+    <label>Passive thermal shielding inserts</label>
+    <description>Passive cuirass or helmet module. Adds 25 percentage points to heat armor. Requires no power.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>true</forHelmet>
+        <statOffsets>
+          <ArmorRating_Heat>0.25</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleCold</defName>
+    <label>Passive cold-weather insulation</label>
+    <description>Passive cuirass or helmet module. Increases cold insulation by 15 degrees. Requires no power.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>true</forHelmet>
+        <statOffsets>
+          <Insulation_Cold>15</Insulation_Cold>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MA_ModuleBase">
+    <defName>MA_ModuleHeat</defName>
+    <label>Passive heat-dissipation liner</label>
+    <description>Passive cuirass or helmet module. Increases heat insulation by 10 degrees. Requires no power.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <forHelmet>true</forHelmet>
+        <statOffsets>
+          <Insulation_Heat>10</Insulation_Heat>
+        </statOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

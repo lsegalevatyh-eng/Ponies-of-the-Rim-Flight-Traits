@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ModularArmor.ArmorSystemDef>
+    <defName>MA_SystemPassiveStats</defName>
+    <systemClass>ModularArmor.ArmorPassiveStatsSystem</systemClass>
+    <order>0</order>
+    <legacySaveRoot>true</legacySaveRoot>
+
+    <affectedStats>
+      <li>ArmorRating_Sharp</li>
+      <li>ArmorRating_Blunt</li>
+      <li>ArmorRating_Heat</li>
+      <li>Insulation_Cold</li>
+      <li>Insulation_Heat</li>
+    </affectedStats>
+  </ModularArmor.ArmorSystemDef>
+
+  <ModularArmor.ArmorSystemDef>
+    <defName>MA_SystemReactor</defName>
+    <systemClass>ModularArmor.ArmorReactorSystem</systemClass>
+    <order>10</order>
+    <legacySaveRoot>true</legacySaveRoot>
+  </ModularArmor.ArmorSystemDef>
+
+  <ModularArmor.ArmorSystemDef>
+    <defName>MA_SystemShield</defName>
+    <systemClass>ModularArmor.ArmorShieldSystem</systemClass>
+    <order>20</order>
+    <legacySaveRoot>true</legacySaveRoot>
+  </ModularArmor.ArmorSystemDef>
+
+  <ModularArmor.ArmorSystemDef>
+    <defName>MA_SystemServo</defName>
+    <systemClass>ModularArmor.ArmorServoSystem</systemClass>
+    <order>30</order>
+    <legacySaveRoot>true</legacySaveRoot>
+
+    <affectedStats>
+      <li>MoveSpeed</li>
+    </affectedStats>
+  </ModularArmor.ArmorSystemDef>
+
+  <ModularArmor.ArmorSystemDef>
+    <defName>MA_SystemEnergy</defName>
+    <systemClass>ModularArmor.ArmorEnergySystem</systemClass>
+    <order>100</order>
+    <legacySaveRoot>true</legacySaveRoot>
+  </ModularArmor.ArmorSystemDef>
+
+</Defs>

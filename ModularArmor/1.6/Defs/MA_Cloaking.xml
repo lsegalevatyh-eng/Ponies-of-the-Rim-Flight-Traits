@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ModularArmor.ArmorSystemDef>
+    <defName>MA_SystemCloaking</defName>
+    <systemClass>ModularArmor.ArmorCloakingSystem</systemClass>
+    <order>45</order>
+  </ModularArmor.ArmorSystemDef>
+
+  <HediffDef MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>MA_ArmorInvisibility</defName>
+    <label>active camouflage</label>
+    <description>The armor's camouflage system conceals its wearer while consuming energy at regular intervals. Incoming damage temporarily disrupts the camouflage.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>10000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+
+      <li Class="HediffCompProperties_DisappearsOnDeath"/>
+
+      <li Class="HediffCompProperties_Invisibility">
+        <visibleToPlayer>true</visibleToPlayer>
+        <fadeDurationTicks>30</fadeDurationTicks>
+        <recoverFromDisruptedTicks>120</recoverFromDisruptedTicks>
+        <affectedByDisruptor>true</affectedByDisruptor>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <ThingDef ParentName="MA_ModuleBase"
+            MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>MA_ModuleCloaking</defName>
+    <label>camouflage module</label>
+    <description>A manually activated camouflage system for a modular cuirass. Operates for up to 4 in-game hours, consuming 16 energy every 60 ticks. Attacking or running out of energy disables camouflage and starts a cooldown. Incoming damage temporarily reveals the wearer.</description>
+
+    <modExtensions>
+      <li Class="ModularArmor.ModuleExtension">
+        <forCuirass>true</forCuirass>
+        <slots>1</slots>
+        <exclusiveGroup>Cloaking</exclusiveGroup>
+        <installTicks>2500</installTicks>
+      </li>
+
+      <li Class="ModularArmor.CloakingModuleExtension">
+        <hediff>MA_ArmorInvisibility</hediff>
+
+        <durationTicks>10000</durationTicks>
+        <cooldownTicks>1800</cooldownTicks>
+
+        <!-- Energy paid once every 60 simulation ticks. -->
+        <energyPerInterval>10</energyPerInterval>
+        <energyIntervalTicks>60</energyIntervalTicks>
+
+        <breakOnAttack>true</breakOnAttack>
+        <iconPath>UI/Abilities/Invisibility</iconPath>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

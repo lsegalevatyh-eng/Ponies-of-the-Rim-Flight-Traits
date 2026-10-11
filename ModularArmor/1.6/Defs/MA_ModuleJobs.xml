@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>MA_InstallModule</defName>
+    <driverClass>ModularArmor.JobDriver_InstallModule</driverClass>
+    <reportString>Installing an armor module.</reportString>
+  </JobDef>
+
+</Defs>
